@@ -1,4 +1,3 @@
-allow init debugfs_tracing_debug:dir mounton;
 allow init vendor_sysfs_graphics:file mounton;
 
 # Allow init to set read_ahead_kb and discard_max_bytes on /data partition
