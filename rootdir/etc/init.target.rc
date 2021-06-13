@@ -87,8 +87,6 @@ on property:ro.factory_mode=1 && property:sys.boot_completed=1
     mount none /sys/class/backlight/panel0-backlight/brightness /sys/class/mi_display/disp-DSI-0/brightness_clone bind
 
 on late-fs
-    wait_for_prop hwservicemanager.ready true
-    #exec_start wait_for_keymaster
     start console
     mount_all --late
 
