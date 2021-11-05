@@ -113,10 +113,6 @@ on boot
     chown system system /sys/class/drm/card0-DSI-1/panel_info
     chmod 0444 /sys/class/drm/card0-DSI-1/panel_info
 
-    # DT2W
-    chown system system /proc/tp_gesture
-    chmod 0644 /proc/tp_gesture
-
 # Health
     chmod 0660 /sys/class/power_supply/battery/input_suspend
     chown system system /sys/class/power_supply/battery/input_suspend
@@ -147,9 +143,9 @@ on boot
     chmod 0666 /mnt/vendor/persist/camera/rear_dc_cal_wd.bin
     chmod 0666 /data/vendor/camera/com.xiaomi.dcal.wu.data
 
-#xiechongchong01 test
-    chmod 0777 /proc/tp_palm
-    chown system system /proc/tp_palm
+    # Touch feature
+    chown system system /dev/xiaomi-touch
+    chmod 0660 /dev/xiaomi-touch
 
 on property:vendor.display.lcd_density=560
    setprop dalvik.vm.heapgrowthlimit 256m
