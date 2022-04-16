@@ -35,6 +35,12 @@
     </integer-array>
 
     <!-- Show battery cycle count -->
-        <bool name="config_show_battery_cycle_count" translatable="false">true</bool>
+    <bool name="config_show_battery_cycle_count" translatable="false">true</bool>
+
+    <!-- Threshold in micro watts below which a charger is rated as "slow"; 1A @ 5V -->
+    <integer name="config_chargingSlowlyThreshold">5000</integer>
+
+    <!-- Threshold in micro watts above which a charger is rated as "fast"; 1.5A @ 5V  -->
+    <integer name="config_chargingFastThreshold">7500</integer>
 
 </resources>
