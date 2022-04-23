@@ -207,6 +207,7 @@ $(call soong_config_set,libinit,vendor_init_lib,//$(LOCAL_PATH):init_xiaomi_ston
 # Input
 PRODUCT_PACKAGES += \
     gpio-keys.kl \
+    holi-qrdsku1-snd-card_Button_Jack.kl \
     uinput-fpc.idc \
     uinput-fpc.kl \
     uinput-goodix.idc \

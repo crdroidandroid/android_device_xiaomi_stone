@@ -10,6 +10,12 @@ prebuilt_usr_keylayout {
 }
 
 prebuilt_usr_keylayout {
+    name: "holi-qrdsku1-snd-card_Button_Jack.kl",
+    src: "holi-qrdsku1-snd-card_Button_Jack.kl",
+    vendor: true,
+}
+
+prebuilt_usr_keylayout {
     name: "uinput-fpc.kl",
     src: "uinput-fpc.kl",
     vendor: true,
