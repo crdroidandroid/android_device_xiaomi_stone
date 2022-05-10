@@ -15,7 +15,7 @@
 /vendor/bin/init\.mi\.btmac\.sh                                                                                                u:object_r:vendor_qti_init_shell_exec:s0
 
 # Camera
-/mnt/vendor/persist/camera(/.*)?                                                                                               u:object_r:camera_persist_file:s0
+/mnt/vendor/persist/camera(/.*)?                                                                                               u:object_r:vendor_camera_persist_file:s0
 /vendor/bin/f2player                                                                                                           u:object_r:hal_camera_default_exec:s0
 /vendor/lib(64)?/libmialgoengine\.so                                                                                           u:object_r:same_process_hal_file:s0
 /vendor/lib(64)?/libarcsoft_high_dynamic_range\.so                                                                             u:object_r:same_process_hal_file:s0

@@ -5,7 +5,7 @@ type audio_socket, file_type;
 type persist_subsys_file, vendor_persist_type, file_type;
 
 # Camera
-type camera_persist_file, vendor_persist_type, file_type;
+type vendor_camera_persist_file, vendor_persist_type, file_type;
 
 # Fingerprint
 type fingerprint_data_file, data_file_type, core_data_file_type, file_type;
