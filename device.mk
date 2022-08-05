@@ -11,7 +11,7 @@ PRODUCT_SHIPPING_API_LEVEL := 30
 
 # Device uses high-density artwork where available
 PRODUCT_AAPT_CONFIG := normal
-PRODUCT_AAPT_PREF_CONFIG := xhdpi
+PRODUCT_AAPT_PREF_CONFIG := xxhdpi
 
 # A/B
 AB_OTA_POSTINSTALL_CONFIG += \
