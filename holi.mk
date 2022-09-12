@@ -453,6 +453,11 @@ PRODUCT_PACKAGES += \
 PRODUCT_SOONG_NAMESPACES += \
     vendor/qcom/opensource/usb/etc
 
+ifneq ($(TARGET_BUILD_VARIANT),user)
+PRODUCT_VENDOR_PROPERTIES += \
+    persist.vendor.usb.config=mtp,adb
+endif
+
 # Vibrator
 PRODUCT_PACKAGES += \
     vendor.qti.hardware.vibrator.service
