@@ -24,9 +24,8 @@
         a 36,36 0 1,0 -72,0
     </string>
 
-    <!-- Preferred refresh rate at keyguard, if supported by the display. Overrides
-          keyguardMaxRefreshRate. -->
-    <integer name="config_keyguardRefreshRate">60</integer>
+    <!-- Preferred max refresh rate at keyguard, if supported by the display. -->
+    <integer name="config_keyguardMaxRefreshRate">60</integer>
 
     <!--  ID for the camera that needs extra protection -->
     <string name="config_protectedCameraId" translatable="false">1</string>
