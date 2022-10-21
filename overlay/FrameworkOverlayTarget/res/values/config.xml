@@ -564,10 +564,6 @@
          Must be in the range specified by minimum and maximum. -->
     <item name="config_screenBrightnessSettingDefaultFloat" format="float" type="dimen">0.14956012</item>
 
-    <!-- Boolean indicating whether the HWC setColorTransform function can be performed efficiently
-         in hardware. -->
-    <bool name="config_setColorTransformAccelerated">true</bool>
-
     <!-- Whether a software navigation bar should be shown. NOTE: in the future this may be
          autodetected from the Configuration. -->
     <bool name="config_showNavigationBar">true</bool>
