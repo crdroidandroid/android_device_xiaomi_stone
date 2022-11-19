@@ -116,6 +116,9 @@ PRODUCT_PACKAGES += \
     libion.vendor \
     libgui_vendor
 
+PRODUCT_PACKAGES += \
+    libpiex_shim
+
 # Consumer IR
 PRODUCT_PACKAGES += \
     android.hardware.ir@1.0-impl \
