@@ -162,6 +162,7 @@ ro.frp.pst=/dev/block/bootdevice/by-name/frp
 
 # Graphics
 debug.sf.auto_latch_unsignaled=0
+debug.sf.disable_backpressure=1
 debug.sf.early.app.duration=13666666
 debug.sf.early.sf.duration=15666666
 debug.sf.earlyGl.app.duration=13666666
