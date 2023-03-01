@@ -108,6 +108,10 @@ on boot
     chown system system /proc/tp_gesture
     chmod 0644 /proc/tp_gesture
 
+# Health
+    chmod 0660 /sys/class/power_supply/battery/input_suspend
+    chown system system /sys/class/power_supply/battery/input_suspend
+
     write /dev/cpuset/audio-app/cpus 1-2
     # Add a cpuset for the camera daemon
     # We want all cores for camera
