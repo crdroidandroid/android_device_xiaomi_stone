@@ -84,6 +84,9 @@ on property:ro.factory_mode=1 && property:sys.boot_completed=1
     chmod 0777 /data/local/tmp
     chmod 0666 /dev/block/sda9
 
+   # Bind mount brightness node
+    mount none /sys/class/backlight/panel0-backlight/brightness /sys/class/mi_display/disp-DSI-0/brightness_clone bind
+
 on late-fs
     wait_for_prop hwservicemanager.ready true
     #exec_start wait_for_keymaster
