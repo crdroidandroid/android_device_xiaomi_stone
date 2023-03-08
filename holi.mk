@@ -372,6 +372,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     init.batterysecret.rc \
     init.class_main.sh \
+    init.goodix.events.sh \
     init.mi.btmac.sh \
     init.kernel.post_boot.sh \
     init.kernel.post_boot-blair.sh \

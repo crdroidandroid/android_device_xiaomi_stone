@@ -254,6 +254,16 @@ service checknv /system/bin/checknv
     oneshot
     seclabel u:r:checknv:s0
 
+service vendor.goodix-events /vendor/bin/init.goodix.events.sh
+    class late_start
+    user root
+    group root system input
+    disabled
+    oneshot
+
 # Sync attribute value between system and vendor
 on property:persist.sys.mcc.mnc=*
     setprop persist.vendor.mcc.mnc ${persist.sys.mcc.mnc}
+
+on property:sys.boot_completed=1
+    start vendor.goodix-events

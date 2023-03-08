@@ -38,6 +38,9 @@
 /vendor/bin/hw/android\.hardware\.biometrics\.fingerprint@2.3-service\.xiaomi                                                  u:object_r:hal_fingerprint_default_exec:s0
 /vendor/bin/hw/vendor\.silead\.hardware\.fingerprintext@1\.0-service                                                           u:object_r:hal_fingerprint_default_exec:s0
 
+# Fix Goodix events
+/vendor/bin/init.goodix.events.sh                                       u:object_r:vendor_goodix_events_exec:s0
+
 # Health
 /sys/devices/platform/soc/soc:maxim_ds28e16/ds_page0_data                                                                      u:object_r:vendor_sysfs_battery_supply:s0
 
