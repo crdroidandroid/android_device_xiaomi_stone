@@ -1278,19 +1278,6 @@ service wpa_cli51 /vendor/bin/wpa_cli driver SET_TX_POWER_CALLING 8
 
 #-ExtB HONGMI-89820,liupeng.wt.Add,20211011 add wifi sar
 
-service ptt_socket_app /system/vendor/bin/ptt_socket_app -d
-    class main
-    user wifi
-    group wifi system inet net_admin
-    capabilities NET_ADMIN
-    oneshot
-
-service ptt_ffbm /system/vendor/bin/ptt_socket_app -f -d
-    user root
-    group root
-    disabled
-    oneshot
-
 service wifi_ftmd /system/vendor/bin/wifi_ftmd
     user system
     group system inet net_admin
