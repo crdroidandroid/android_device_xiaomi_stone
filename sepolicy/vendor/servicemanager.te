@@ -1,0 +1,4 @@
+allow servicemanager platform_app:binder { call transfer };
+allow servicemanager platform_app:dir search;
+allow servicemanager platform_app:file { read open };
+allow servicemanager platform_app:process getattr;

@@ -3,3 +3,13 @@ allow init debugfs_tracing_debug:dir mounton;
 
 # Allow init to set read_ahead_kb and discard_max_bytes on /data partition
 allow init vendor_sysfs_scsi_host:file w_file_perms;
+
+allow init debugfs_tracing_debug:dir mounton;
+
+# /proc/last_kmsg
+allow init proc_last_kmsg:file r_file_perms;
+allow init proc_last_kmsg:file setattr;
+
+allow init vendor_file:file execute;
+
+allow init hwservicemanager:binder { call transfer };
