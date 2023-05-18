@@ -10,3 +10,6 @@ allow vendor_hal_perf_default hal_graphics_composer_default:file r_file_perms;
 allow vendor_hal_perf_default sysfs_thermal:file w_file_perms;
 allow vendor_hal_perf_default ctl_start_prop:property_service { set };
 allow vendor_hal_perf_default ctl_stop_prop:property_service { set };
+
+set_prop(vendor_hal_perf_default, vendor_msm_irqbalance_prop)
+set_prop(vendor_hal_perf_default, ctl_stop_prop)
