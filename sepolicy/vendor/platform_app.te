@@ -12,6 +12,7 @@ allow platform_app hal_camera_default:fd *;
 allow platform_app servicemanager:binder { call transfer };
 allow platform_app vendor_audio_prop:file { getattr open read map };
 allow platform_app vendor_camera_data_file:dir { append map r_dir_perms write };
+allow platform_app vendor_camera_data_file:file { read };
 allow platform_app vendor_display_prop:file { getattr open read map };
 allow platform_app vendor_hal_camerapostproc_xiaomi:binder { call transfer };
 allow platform_app vendor_hal_camerapostproc_xiaomi:fd *;
