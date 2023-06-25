@@ -2,3 +2,7 @@ dontaudit {
   hal_camera_default
   rild
 } default_prop:file r_file_perms;
+
+# Apps are no longer allowed open access to /dev/ashmem, unless they
+# target API level < Q.
+dontaudit untrusted_app ashmem_device:chr_file open;
