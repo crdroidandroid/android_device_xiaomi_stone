@@ -1,3 +1,4 @@
+allow system_server app_zygote:process { getattr getpgid };
 allow system_server hal_camera_default:binder { call transfer };
 allow system_server hal_camera_default:fd *;
 
@@ -5,3 +6,7 @@ allow system_server hal_camera_default:fd *;
 allow system_server proc_last_kmsg:file r_file_perms;
 
 allow system_server system_file:file r_file_perms;
+
+# Allow system_server to set vendor_persist_camera_prop
+get_prop(system_server, vendor_camera_prop)
+get_prop(system_server,vendor_persist_camera_prop)
