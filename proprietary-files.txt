@@ -522,7 +522,7 @@ vendor/bin/init.qti.qcv.sh
 vendor/etc/init/init.qti.qcv.rc
 
 # QMI
-system/etc/sysconfig/qti_whitelist.xml
+etc/sysconfig/qti_whitelist.xml
 vendor/bin/irsc_util
 vendor/bin/qmipriod
 vendor/bin/qrtr-lookup
@@ -566,7 +566,7 @@ vendor/lib64/libqmiservices.so
 vendor/lib64/libqrtr.so
 
 # RIL
-system/etc/permissions/privapp-permissions-qti.xml
+etc/permissions/privapp-permissions-qti.xml
 -system_ext/app/QtiTelephonyService/QtiTelephonyService.apk
 -system_ext/app/atfwd/atfwd.apk
 system_ext/etc/permissions/embms.xml
@@ -786,7 +786,7 @@ vendor/etc/wifi/aoa_cldb_falcon.bin
 vendor/etc/wifi/aoa_cldb_swl14.bin
 
 # WiFi Display
--system/framework/WfdCommon.jar
+-framework/WfdCommon.jar
 system_ext/bin/wfdservice
 system_ext/etc/init/wfdservice.rc
 system_ext/etc/permissions/wfd-system-ext-privapp-permissions-qti.xml
