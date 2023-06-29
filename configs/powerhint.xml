@@ -335,6 +335,7 @@
         <!--L CPU CORE 5 SCHED LOAD BOOST -->
         <!--L CPU CORE 6 SCHED LOAD BOOST -->
         <!--L CPU CORE 7 SCHED LOAD BOOST -->
+        <!--sysctl_sched_prefer_spread 2-->
         <!--L CPU Hispeed freq of 1113Mhz -->
         <!--L CLUSTER_LITTLE - Set hispeed load 95 -->
         <!--L CLUSTER_BIG - Set hispeed load 95 -->
@@ -342,11 +343,12 @@
         <!--CPUBW HWMON - Set io_percent 100 -->
         <!--CPUBW HWMON - Set up_scale 0 -->
         <!--L CPU core ctl min cpus 6 -->
+        <!--L CPU cluster min freq of 979Mhz -->
         <Config
             Id="0x00001330" Enable="true" Timeout="0" Target="blair"
             Resources="0x40C68100, -12, 0x40C68110, -12, 0x40C68120, -12,
-            0x40C68130, -12, 0x40C68000, -12, 0x40C68010, -12, 0x40C68020, -12, 0x40C68030, -12,
-            0x4143C100, 1113, 0x41440100, 0x5F, 0x41440000, 0x5F, 0x43034000, 0x32, 0x43020000, 0x64, 0x43014000, 0x0, 0x41000100, 6"/>
+            0x40C68130, -12, 0x40C68000, -12, 0x40C68010, -12, 0x40C68020, -12, 0x40C68030, -12, 0x40CA8000, 0x2,
+            0x4143C100, 1113, 0x41440100, 0x5F, 0x41440000, 0x5F, 0x43034000, 0x32, 0x43020000, 0x64, 0x43014000, 0x0, 0x41000100, 6,0x40800100, 979"/>
 
         <!-- camera 30fps-->
         <!--L CPU CORE 0 SCHED LOAD BOOST -->
@@ -428,6 +430,9 @@
         <!--L CPU CORE 5 SCHED LOAD BOOST -->
         <!--L CPU CORE 6 SCHED LOAD BOOST -->
         <!--L CPU CORE 7 SCHED LOAD BOOST -->
+        <!--L CLUSTER_LITTLE  SCHED LOAD BOOST -->
+        <!--L CLUSTER_BIG  SCHED LOAD BOOST -->
+        <!--sysctl_sched_prefer_spread 2-->
         <!--L CPU Hispeed freq of 1113Mhz -->
         <!--L CLUSTER_LITTLE - Set hispeed load 95 -->
         <!--L CLUSTER_BIG - Set hispeed load 95 -->
@@ -437,6 +442,7 @@
             Id="0x00001334" Enable="true" Timeout="0" Target="blair"
             Resources="0x40C68100, 0xFFFFFFFA, 0x40C68110, 0xFFFFFFFA, 0x40C68120, 0xFFFFFFFA,
             0x40C68130, 0xFFFFFFFA, 0x40C68000, 0xFFFFFFFA, 0x40C68010, 0xFFFFFFFA, 0x40C68020, 0xFFFFFFFA, 0x40C68030, 0xFFFFFFFA,
+            0x41444000, 1, 0x41444100, 1,0x40CA8000,2,
             0x4143C100, 1113, 0x41440100, 0x5F, 0x41440000, 0x5F, 0x43034000, 0x14, 0x41000100, 6"/>
 
 
@@ -618,7 +624,7 @@
             Resources="0x40C68100, -10, 0x40C68110, -10, 0x40C68120, -10,
             0x40C68130, -10, 0x40C68000, -10, 0x40C68010, -10, 0x40C68020, -10, 0x40C68030, -10,
             0x40800100, 1113, 0x43034000, 0x32, 0x43020000, 0x64, 0x43014000, 0x0, 0x41000100, 6,
-            0x40CEC000, 0x1, 0x40CA8000, 0x1"/>
+            0x40CEC000, 0x1, 0x40CA8000, 0x1, 0x40C20000,0x32, 0x40C1C000,0x3c"/>
 
     </Powerhint>
 </HintConfigs>

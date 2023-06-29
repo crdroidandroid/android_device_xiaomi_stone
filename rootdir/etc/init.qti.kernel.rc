@@ -82,9 +82,7 @@ on boot
     # Set the default message loglevel to KERN_INFO
     write /proc/sys/kernel/printk "4 6 1 7"
 
-    # Allow access to emmc rawdump block partition and dload sysfs node
-    chown root system /dev/block/bootdevice/by-name/rawdump
-    chmod 0660 /dev/block/bootdevice/by-name/rawdump
+    # Allow access to dload sysfs node
     chown root system /sys/kernel/dload/emmc_dload
     chmod 0660 /sys/kernel/dload/emmc_dload
     chown root system /dev/block/bootdevice/by-name/ramdump

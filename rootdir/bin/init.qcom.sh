@@ -450,6 +450,9 @@ fi
 chmod g-w /data/vendor/modem_config
 setprop ro.vendor.ril.mbn_copy_completed 1
 
+chown -h root.oem_2902 /sys/devices/platform/soc/8048000.tmc/coresight-tmc-etr/block_size
+chmod 660 /sys/devices/platform/soc/8048000.tmc/coresight-tmc-etr/block_size
+
 #check build variant for printk logging
 #current default minimum boot-time-default
 buildvariant=`getprop ro.build.type`

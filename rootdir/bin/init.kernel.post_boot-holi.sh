@@ -96,8 +96,6 @@ function configure_read_ahead_kb_values() {
 }
 
 function configure_memory_parameters() {
-	MemTotalStr=`cat /proc/meminfo | grep MemTotal`
-	MemTotal=${MemTotalStr:16:8}
 	# Set Memory parameters.
 
 	# Set swappiness to 100 for all targets
@@ -106,15 +104,14 @@ function configure_memory_parameters() {
 	# Disable wsf for all targets beacause we are using efk.
 	# wsf Range : 1..1000 So set to bare minimum value 1.
 	echo 1 > /proc/sys/vm/watermark_scale_factor
-	# Disable the feature of watermark boost for 8G and below device
-	if [ $MemTotal -le 8388608 ]; then
-		echo 0 > /proc/sys/vm/watermark_boost_factor
-	fi
 	configure_zram_parameters
 	configure_read_ahead_kb_values
-
-	#Spawn 2 kswapd threads which can help in fast reclaiming of pages
-	echo 2 > /proc/sys/vm/kswapd_threads
+        
+        #M17-T code for HQ-264248 by liuhelong at 2022/12/8 start
+	#Spawn 1 kswapd threads which can help in fast reclaiming of pages
+	echo 1 > /proc/sys/vm/kswapd_threads
+        #M17-T code for HQ-264248 by liuhelong at 2022/12/8 end
+        
 }
 
 # Core control parameters for silver
@@ -177,8 +174,11 @@ echo -6 > /sys/devices/system/cpu/cpu7/sched_load_boost
 echo 85 > /sys/devices/system/cpu/cpufreq/policy6/schedutil/hispeed_load
 
 # configure input boost settings
-echo "0:1190400" > /sys/devices/system/cpu/cpu_boost/input_boost_freq
+echo "0:1516800" > /sys/devices/system/cpu/cpu_boost/input_boost_freq
 echo 120 > /sys/devices/system/cpu/cpu_boost/input_boost_ms
+
+echo ":1804800 1:0 2:0 3:0 4:0 5:0 6:2016000 7:0"> /sys/devices/system/cpu/cpu_boost/powerkey_input_boost_freq
+echo 400 > /sys/devices/system/cpu/cpu_boost/powerkey_input_boost_ms
 
 # Enable bus-dcvs
 for device in /sys/devices/platform/soc
@@ -244,3 +244,7 @@ echo N > /sys/module/lpm_levels/parameters/sleep_disabled
 configure_memory_parameters
 
 setprop vendor.post_boot.parsed 1
+
+# M17P_T code for HQ-290074 by zhouxinyi at 2023-03-27 start
+echo 0 > /proc/sys/vm/panic_on_oom
+# M17P_T code for HQ-290074 by zhouxinyi at 2023-03-27 end

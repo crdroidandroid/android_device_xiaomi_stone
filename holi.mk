@@ -380,7 +380,6 @@ PRODUCT_PACKAGES += \
     init.qcom.post_boot.sh \
     init.qcom.rc \
     init.qti.kernel.rc \
-    init.qti.ufs.rc \
     init.target.rc \
     ueventd.qcom.rc \
     vendor_modprobe.sh
