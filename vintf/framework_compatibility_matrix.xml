@@ -1,17 +1,3 @@
-<!--
-    Input:
-        vendor_framework_compatibility_matrix.xml
-        vendor_framework_compatibility_matrix.xml
-        vendor_framework_compatibility_matrix.xml
-        dax_framework_compatibility_matrix.xml
-        framework_compatibility_matrix.xml
-        vendor_framework_compatibility_matrix.xml
-        vendor_framework_compatibility_matrix.xml
-        vendor_framework_compatibility_matrix.xml
-        vendor_framework_compatibility_matrix.xml
-        vendor_framework_compatibility_matrix.xml
-        vendor_nfc_framework_compatibility_matrix_pn557.xml
--->
 <compatibility-matrix version="2.0" type="framework">
     <hal format="hidl" optional="true">
         <name>android.hardware.automotive.evs</name>
