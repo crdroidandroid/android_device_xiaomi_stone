@@ -364,6 +364,9 @@ firmware_directories /vendor/firmware_mnt/image/
 # Kmsg device
 /dev/kmsg                                               0620   root       system
 
+# hardwareinfo
+/dev/hardwareinfo        0660   root       system
+
 # LED class devices
 /sys/class/leds/red      delay_on     0640    system    system
 /sys/class/leds/red      delay_off    0640    system    system
