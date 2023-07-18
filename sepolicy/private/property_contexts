@@ -1,3 +1,6 @@
+# Fingerprint
+sys.fp.miui.token              u:object_r:exported_system_prop:s0
+
 # GLobal
 ro.boot.hwc                    u:object_r:exported_default_prop:s0
 ro.build.flavor                u:object_r:build_prop:s0
