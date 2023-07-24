@@ -169,9 +169,15 @@ persist.bluetooth.a2dp_offload.disabled=false
 persist.vendor.bt.a2dp_offload_cap=sbc-aptx-aptxhd-aac
 persist.vendor.qcom.bluetooth.a2dp_offload_cap=sbc-aptx-aptxhd-aac
 ro.bluetooth.a2dp_offload.supported=true
+ro.vendor.bluetooth.defaultabsvol=false
+persist.bluetooth.disableabsvol=true
+persist.vendor.bluetooth.modem_nv_support=true
 
 # Camera
 camera.disable_zsl_mode=true
+
+# Charger
+persist.vendor.charge.oneTrack=true
 
 # SoC
 ro.soc.manufacturer=QTI
@@ -221,6 +227,7 @@ debug.sf.high_fps_late_app_phase_offset_ns=1000000
 debug.sf.high_fps_late_sf_phase_offset_ns=-4000000
 debug.sf.hw=0
 debug.sf.predict_hwc_composition_strategy=0
+debug.sf.treat_170m_as_sRGB=1
 persist.sys.sf.color_saturation=1.0
 ro.hardware.egl=adreno
 ro.hardware.vulkan=adreno
@@ -233,6 +240,7 @@ ro.surface_flinger.protected_contents=true
 ro.surface_flinger.use_color_management=true
 ro.surface_flinger.wcg_composition_dataspace=143261696
 ro.vendor.colorpick_adjust=true
+ro.vendor.display.type=oled
 ro.vendor.all_modes.colorpick_adjust=true
 ro.vendor.sf.enable_fb_scaling=1
 vendor.display.comp_mask=0
@@ -247,12 +255,14 @@ vendor.display.enable_early_wakeup=1
 vendor.display.enable_optimize_refresh=1
 vendor.display.enable_perf_hint_large_comp_cycle=1
 vendor.display.enable_posted_start_dyn=2
+vendor.display.idle_time=1100
 vendor.display.qdcm.mode_combine=2
 vendor.display.use_layer_ext=0
 vendor.display.use_smooth_motion=0
 vendor.gralloc.disable_ubwc=0
 
 # Media
+debug.stagefright.c2inputsurface=-1
 debug.stagefright.ccodec=4
 debug.stagefright.omx_default_rank=0
 
