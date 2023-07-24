@@ -407,7 +407,7 @@ vendor/lib64/libmmosal.so
 vendor/etc/media_blair/video_system_specs.json
 vendor/etc/media_blair_lite/video_system_specs.json
 vendor/etc/media_holi/video_system_specs.json
-vendor/etc/media_codecs.xml
+vendor/etc/media_codecs.xml|76fa72d32e3ace473d8c3dbeefe05a087c14ed80
 vendor/etc/media_codecs_blair.xml
 vendor/etc/media_codecs_blair_lite.xml
 vendor/etc/media_codecs_google_audio.xml
