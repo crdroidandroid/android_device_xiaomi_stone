@@ -41,6 +41,7 @@ genfscon sysfs /devices/platform/soc/5ab0000.qcom,venus/subsys[0-9]+/restart_lev
 
 # Vibrator
 genfscon sysfs /devices/platform/soc/[a-f0-9]+.qcom,spmi/spmi-0/spmi0-0[0-9]/[a-f0-9]+.qcom,spmi:qcom,[a-z0-9]+@[0-9]:qcom,haptics@c000/leds/vibrator(/.*)?   u:object_r:sysfs_leds:s0
+genfscon sysfs /devices/platform/soc/soc:vibrator/leds/vibrator u:object_r:sysfs_leds:s0
 
 # Wakeup nodes
 genfscon sysfs /devices/platform/dummy_hcd.0/usb1/wakeup/wakeup                                                                     u:object_r:sysfs_wakeup:s0
