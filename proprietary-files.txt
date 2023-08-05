@@ -132,6 +132,14 @@ vendor/lib64/hw/vendor.qti.hardware.capabilityconfigstore@1.0-impl.so
 # Consumer IR
 vendor/lib64/hw/consumerir.default.so:vendor/lib64/hw/consumerir.holi.so
 
+# Diag
+system_ext/lib64/libdiag_system.so
+system_ext/lib64/vendor.qti.diaghal@1.0.so
+vendor/bin/diag-router
+vendor/etc/init/vendor.qti.diag.rc
+-vendor/etc/vintf/manifest/vendor.qti.diag.hal.service.xml
+vendor/lib64/vendor.qti.diaghal@1.0.so
+
 # Display
 vendor/bin/qdcmss
 vendor/etc/display/DPU660.xml
@@ -309,10 +317,8 @@ system_ext/lib64/lib-imsvideocodec.so
 system_ext/lib64/lib-imsvt.so
 system_ext/lib64/lib-imsvtextutils.so
 system_ext/lib64/lib-imsvtutils.so
-system_ext/lib64/libdiag_system.so
 system_ext/lib64/libimscamera_jni.so
 system_ext/lib64/libimsmedia_jni.so
-system_ext/lib64/vendor.qti.diaghal@1.0.so
 system_ext/lib64/vendor.qti.imsrtpservice@3.0.so
 -system_ext/priv-app/ims/ims.apk|101f8487b5954514421a3956cef437852bf05e0b
 vendor/bin/ims_rtp_daemon
@@ -626,7 +632,6 @@ system_ext/lib64/vendor.qti.hardware.radio.uim_remote_server@1.0.so
 vendor/bin/hw/qcrilNrd
 vendor/bin/ATFWD-daemon
 vendor/bin/adpl
-vendor/bin/diag-router
 vendor/bin/netmgrd
 vendor/bin/pd-mapper
 vendor/bin/port-bridge
