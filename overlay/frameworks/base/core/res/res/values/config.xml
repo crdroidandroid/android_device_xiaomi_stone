@@ -299,5 +299,5 @@
     <bool name="config_useVideoPauseWorkaround">true</bool>
 
     <!-- Path to fast charging status file to detect whether an oem fast charger is active -->
-    <string name="config_oemFastChargerStatusPath" translatable="false">/sys/class/power_supply/bms/fastcharge_mode</string>
+    <string name="config_oemFastChargerStatusPath" translatable="false">/sys/class/qcom-battery/fastcharge_mode</string>
 </resources>
