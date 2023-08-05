@@ -7,20 +7,105 @@
 /mnt/vendor/persist/audio/aw_cali.bin                                                                                          u:object_r:vendor_persist_audio_file:s0
 
 # Battery
-/vendor/bin/batterysecret                                                                                                      u:object_r:batterysecret_exec:s0
-/mnt/vendor/persist/subsys(/.*)?                                                                                               u:object_r:persist_subsys_file:s0
-/sys/devices/platform/battery/power_supply/bms/fastcharge_mode                                                                 u:object_r:vendor_sysfs_battery_supply:s0
+/vendor/bin/batterysecret                                                                        u:object_r:batterysecret_exec:s0
+/mnt/vendor/persist/subsys(/.*)?                                                             u:object_r:persist_subsys_file:s0
+/sys/devices/platform/soc/soc:charger-manager/power_supply/battery(/.*)?                     u:object_r:vendor_sysfs_battery_supply:s0
+/sys/devices/platform/soc/soc:maxim_ds28e16/ds_page0_data                                    u:object_r:vendor_sysfs_battery_supply:s0
+/sys/devices/platform/soc/4c84000.i2c/i2c-1/1-0071/power_supply/sm5602_bat/capacity		     u:object_r:vendor_sysfs_battery_supply:s0
+/sys/devices/platform/soc/4c84000.i2c/i2c-1/1-0071/power_supply/sm5602_bat/status		     u:object_r:vendor_sysfs_battery_supply:s0
+/sys/devices/platform/soc/4c84000.i2c/i2c-1/1-006a/power_supply/bq25890_charger/status		 u:object_r:vendor_sysfs_battery_supply:s0
+/sys/devices/platform/soc/4c84000.i2c/i2c-1/1-0071/power_supply/sm5602_bat/voltage_now		 u:object_r:vendor_sysfs_battery_supply:s0
+/sys/devices/platform/soc/4c84000.i2c/i2c-1/1-006a/power_supply/bq25890_charger/constant_charge_current	 u:object_r:vendor_sysfs_battery_supply:s0
+/sys/devices/platform/soc/4c84000.i2c/i2c-1/1-0071/power_supply/sm5602_bat/temp			     u:object_r:vendor_sysfs_battery_supply:s0
+/sys/devices/platform/soc/4c84000.i2c/i2c-1/1-006a/power_supply/bq25890_charger/health		 u:object_r:vendor_sysfs_battery_supply:s0
+/sys/devices/platform/soc/4c84000.i2c/i2c-1/1-006a/power_supply/usb/type	                 u:object_r:vendor_sysfs_battery_supply:s0
+/sys/devices/platform/soc/4c84000.i2c/i2c-1/1-0071/power_supply/sm5602_bat/current_now		 u:object_r:vendor_sysfs_battery_supply:s0
+/sys/devices/platform/soc/4c90000.i2c/i2c-3/3-0051/power_supply/ln8000_standalone/present	 u:object_r:vendor_sysfs_battery_supply:s0
+/sys/devices/platform/soc/4c84000.i2c/i2c-1/1-006a/power_supply/bq25890_charger/constant_charge_voltage	 u:object_r:vendor_sysfs_battery_supply:s0
+/sys/devices/platform/soc/4c84000.i2c/i2c-1/1-0071/power_supply/sm5602_bat/cycle_count		 u:object_r:vendor_sysfs_battery_supply:s0
+/sys/devices/platform/soc/4c84000.i2c/i2c-1/1-006a/power_supply/bq25890_charger/constant_charge_voltage_max u:object_r:vendor_sysfs_battery_supply:s0
+/sys/devices/platform/soc/4c84000.i2c/i2c-1/1-006a/power_supply/usb/online			         u:object_r:vendor_sysfs_usb_supply:s0
+/sys/devices/platform/soc/4c84000.i2c/i2c-1/1-006a/power_supply/usb/usb_type			     u:object_r:vendor_sysfs_usb_supply:s0
+/sys/devices/platform/soc/4c84000.i2c/i2c-1/1-006a/power_supply/usb(/.*)?                    u:object_r:vendor_sysfs_usb_supply:s0
 
 # Bluetooth
 /vendor/bin/init\.mi\.btmac\.sh                                                                                                u:object_r:vendor_qti_init_shell_exec:s0
 
 # Camera
-/mnt/vendor/persist/camera(/.*)?                                                                                               u:object_r:vendor_camera_persist_file:s0
+/mnt/vendor/persist/camera(/.*)?                                                                                              u:object_r:vendor_camera_persist_file:s0
+/persist/camera(/.*)?                 u:object_r:vendor_camera_persist_file:s0
+/vendor/camera(/.*)?                  u:object_r:vendor_camera_persist_file:s0 
 /vendor/bin/f2player                                                                                                           u:object_r:hal_camera_default_exec:s0
-/vendor/lib(64)?/libmialgoengine\.so                                                                                           u:object_r:same_process_hal_file:s0
-/vendor/lib(64)?/libarcsoft_high_dynamic_range\.so                                                                             u:object_r:same_process_hal_file:s0
+/vendor/dsp/cdsp/fastrpc_shell_3                      u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/libxmi_hdr_checker\.so               u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/libmialgo_basic\.so                  u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/libMIAIHDRhvx_interface\.so          u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/libc\+\+_shared\.so                  u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/libmialgoengine\.so                  u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/libmpbase\.so                        u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/libmorpho_Lowlight\.so               u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/libxml2_vendor\.so                   u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/libSuperSensor\.so                   u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/libSuperSensorCPU\.so                u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/libHalSuperSensorServer\.so          u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/libSuperSensor_skel\.so              u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/libarcsoft_beautyshot\.so            u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/libalCFR\.so                         u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/libxmi_high_dynamic_range\.so        u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/libarcsoft_high_dynamic_range\.so    u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/libarcsoft_low_light_hdr\.so         u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/libarcsoft_hdr_detection\.so         u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/libcvp\.so                           u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/libcvp_stub\.so                      u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/libcvp_common\.so                    u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/libalhLDC\.so                        u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/libalLDC\.so                         u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/libalAILDC\.so                       u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/libflaw\.so                          u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/libsdk_sr\.so                        u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/libst_sr_models\.so                  u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/libarcsoft_superportrait\.so         u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/libmialgo_ie_capture\.so             u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/libmiStereoFactoryRemapLib\.so       u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/libanc_dc_base\.so                   u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/libwa_dof\.so                        u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/libwa_refocus\.so                    u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/rfsa/adsp/libMIAIHDR_skel\.so        u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/rfsa/adsp/libdspCV_skel\.so          u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/rfsa/adsp/libapps_mem_heap\.so       u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/rfsa/adsp/libSuperSensor_skel\.so    u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/libmibokeh_712\.so                   u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/libbeauty_face_interface\.so         u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/libmiai_portraitsupernight\.so       u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/libsymphony-cpu\.so                  u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/libmiai_supernight\.so               u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/libarcsoft_dualcam_refocus_image\.so u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/libarcsoft_dualcam_refocus_video\.so u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/libarcsoft_portrait_lighting\.so     u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/libarcsoft_portrait_lighting_c\.so   u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/libarcsoft_supernight\.so            u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/libwa_widelens_undistort\.so         u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/libSNPE\.so                          u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/libsnpe_dsp_skel\.so                 u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/libsnpe_dsp_domains_v2\.so           u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/libsnpe_dsp_domains_skel\.so         u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/libsnpe_dsp_v65_domains_v2_skel\.so  u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/libsnpe_dsp_v66_domains_v2_skel\.so  u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/libmialgo_aio_seg\.so                u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/libmialgo_ai_vision\.so              u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/libmialgo_utils\.so                  u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/libmiphone_capture_bokeh\.so         u:object_r:same_process_hal_file:s0
 /vendor/lib(64)?/libipebpsstriping\.so                                                                                         u:object_r:same_process_hal_file:s0
 /vendor/lib(64)?/libipebpsstriping170\.so                                                                                      u:object_r:same_process_hal_file:s0
+/sys/devices/platform/soc/5c1b000.qcom,cci0/5c1b000.qcom,cci0:qcom,camera-flash@0                                              u:object_r:sysfs_leds:s0
+
+# Display
+/sys/devices/virtual/mi_display/disp_feature/disp-DSI-0/dynamic_fps     u:object_r:vendor_sysfs_graphics:s0
+/sys/devices/virtual/mi_display/disp_feature/disp-DSI-+[0-1](/.*)?      u:object_r:vendor_sysfs_graphics:s0
+/sys/devices/virtual/mi_display/disp_feature/disp-DSI-+[0-1]/disp_count u:object_r:vendor_sysfs_graphics:s0
+/sys/devices/virtual/huaqin/                                            u:object_r:huaqin_sysfs:s0
+/sys/devices/platform/soc/soc:simtray/status                            u:object_r:sysfs_simtray_status:s0
+/sys/devices/platform/soc/4c88000.i2c/i2c-2/2-0038/fts_edge_mode        u:object_r:vendor_sysfs_sensors:s0
 
 # Fingerprint
 /dev/goodix_fp                                                                                                                 u:object_r:fingerprint_device:s0
@@ -41,9 +126,6 @@
 # Fix Goodix events
 /vendor/bin/init.goodix.events.sh                                       u:object_r:vendor_goodix_events_exec:s0
 
-# Health
-/sys/devices/platform/soc/soc:maxim_ds28e16/ds_page0_data                                                                      u:object_r:vendor_sysfs_battery_supply:s0
-
 # IR
 /dev/ir_spi                                                                                                                    u:object_r:ir_spi_device:s0
 /dev/lirc0                                                                                                                     u:object_r:ir_spi_device:s0
@@ -56,6 +138,11 @@
 
 # Label discard_max_bytes in /data partition
 /sys/devices/platform/soc/4804000.ufshc/host0/target0:0:0/0:0:0:0/block/sda/queue/discard_max_bytes                            u:object_r:vendor_sysfs_scsi_host:s0
+
+# Leds
+/sys/devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-02/c440000.qcom,spmi:qcom,pm8350c@2:qcom,flash_led@ee00/leds/led:torch_[0-3](/.*)        u:object_r:sysfs_leds:s0
+/sys/devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-02/c440000.qcom,spmi:qcom,pm8350c@2:qcom,flash_led@ee00/leds/led:flash_[0-3](/.*)        u:object_r:sysfs_leds:s0
+/sys/devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-02/c440000.qcom,spmi:qcom,pm8350c@2:qcom,flash_led@ee00/leds/led:switch_[0-3](/.*)       u:object_r:sysfs_leds:s0
 
 # Mlipay
 /vendor/bin/mlipayd@1.1                                                                                                        u:object_r:hal_mlipay_default_exec:s0

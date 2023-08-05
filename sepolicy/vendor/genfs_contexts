@@ -12,6 +12,11 @@ genfscon sysfs /devices/platform/soc/soc:qcom,cpu0-cpu-l3-lat                   
 genfscon sysfs /devices/platform/soc/soc:qcom,cpu6-cpu-l3-lat                                                                       u:object_r:sysfs_msm_subsys:s0
 genfscon sysfs /devices/platform/soc/soc:qcom,gpubw                                                                                 u:object_r:sysfs_msm_subsys:s0
 genfscon sysfs /devices/platform/soc/soc:qcom,gpubw/devfreq                                                                         u:object_r:sysfs_msm_subsys:s0
+genfscon sysfs /class/huaqin/					                                                                    u:object_r:huaqin_sysfs:s0
+genfscon sysfs /devices/virtual/huaqin/				                                                                    u:object_r:huaqin_sysfs:s0
+genfscon sysfs /bus/i2c/drivers/fts_ts/2-0038/fts_edge_mode                                                                         u:object_r:vendor_sysfs_sensors:s0
+genfscon sysfs /bus/i2c/devices/2-0038/fts_rw_reg				                                                    u:object_r:vendor_sysfs_sensors:s0
+genfscon sysfs /bus/i2c/devices/2-0038/fts_charger_mode			                                                            u:object_r:vendor_sysfs_sensors:s0
 
 # Extcon sysfs
 genfscon sysfs /devices/platform/soc/1628000.qcom,msm-eud/extcon                                                                    u:object_r:sysfs_extcon:s0

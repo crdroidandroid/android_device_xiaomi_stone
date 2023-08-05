@@ -1,6 +1,10 @@
 # Aware
 ro.vendor.aware_available               u:object_r:vendor_aware_available_prop:s0
 
+# BT
+persist.vendor.btstack.              u:object_r:vendor_bluetooth_prop:s0
+persist.vendor.bt.                   u:object_r:vendor_bluetooth_prop:s0
+
 # Camera
 persist.camera.                         u:object_r:vendor_camera_prop:s0
 ro.boot.camera.config                   u:object_r:vendor_camera_prop:s0
@@ -23,6 +27,9 @@ ro.vendor.gfx.32bit.target              u:object_r:vendor_default_prop:s0
 # Mlipay
 persist.vendor.sys.pay.                 u:object_r:vendor_tee_listener_prop:s0
 persist.vendor.sys.provision.status     u:object_r:vendor_tee_listener_prop:s0
+
+# NFC
+ro.vendor.nfc.repair       u:object_r:vendor_public_vendor_default_prop:s0
 
 # RIL
 odm.ril.radio.status.                   u:object_r:vendor_radio_prop:s0

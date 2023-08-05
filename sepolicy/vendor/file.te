@@ -8,6 +8,10 @@ type persist_subsys_file, vendor_persist_type, file_type;
 type vendor_camera_persist_file, vendor_persist_type, file_type;
 type public_adsprpcd_file, file_type;
 
+# Display
+type huaqin_sysfs, fs_type, sysfs_type;
+type sysfs_simtray_status, fs_type, sysfs_type;
+
 # Fingerprint
 type fingerprint_data_file, data_file_type, core_data_file_type, file_type;
 
