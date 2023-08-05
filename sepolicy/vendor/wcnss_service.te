@@ -5,3 +5,6 @@ allow vendor_wcnss_service vendor_data_file:file create_file_perms;
 allow vendor_wcnss_service vendor_wifi_vendor_wpa_socket:dir create_dir_perms;
 allow vendor_wcnss_service vendor_wifi_vendor_wpa_socket:sock_file create_file_perms;
 allow vendor_wcnss_service property_socket:sock_file write;
+
+r_dir_file(vendor_wcnss_service, mnt_vendor_file)
+allow vendor_wcnss_service mnt_vendor_file:file create_file_perms;
