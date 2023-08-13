@@ -140,7 +140,7 @@ PRODUCT_PACKAGES += \
     android.hardware.drm-service.clearkey
 
 PRODUCT_PACKAGES += \
-    libdrm
+    libdrm.vendor
 
 # Fastbootd
 PRODUCT_PACKAGES += \
