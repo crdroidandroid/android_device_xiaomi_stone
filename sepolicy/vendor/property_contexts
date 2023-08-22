@@ -29,7 +29,7 @@ persist.vendor.sys.pay.                 u:object_r:vendor_tee_listener_prop:s0
 persist.vendor.sys.provision.status     u:object_r:vendor_tee_listener_prop:s0
 
 # NFC
-ro.vendor.nfc.repair       u:object_r:vendor_public_vendor_default_prop:s0
+ro.vendor.nfc.repair                    u:object_r:vendor_nfc_prop:s0
 
 # RIL
 odm.ril.radio.status.                   u:object_r:vendor_radio_prop:s0
