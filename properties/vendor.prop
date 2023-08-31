@@ -293,6 +293,7 @@ persist.vendor.radio.manual_nw_rej_ct=1
 persist.vendor.radio.mbn_trace=true
 persist.vendor.radio.procedure_bytes=SKIP
 persist.vendor.radio.rat_on=combine
+persist.vendor.radio.redir_party_num=0
 ro.telephony.call_ring.multiple=false
 ro.telephony.default_cdma_sub=0
 ro.telephony.default_network=33,33
