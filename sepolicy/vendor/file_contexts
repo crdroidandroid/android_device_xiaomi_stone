@@ -167,9 +167,6 @@
 /data/vendor/thermal(/.*)?                                                                                                     u:object_r:thermal_data_file:s0
 /vendor/bin/mi_thermald                                                                                                        u:object_r:mi_thermald_exec:s0
 
-# Touch
-/dev/xiaomi-touch                                                                                                              u:object_r:touchfeature_device:s0
-
 # Xiaomi MAC
 /data/vendor/mac_addr(/.*)?                                                                                                    u:object_r:vendor_wifi_vendor_data_file:s0
 /data/vendor/wlan_logs(/.*)?                                                                                                   u:object_r:vendor_wifi_vendor_data_file:s0

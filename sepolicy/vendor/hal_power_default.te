@@ -1,2 +1,0 @@
-# Allow hal_power_default to write to dt2w node
-allow hal_power_default touchfeature_device:chr_file rw_file_perms;

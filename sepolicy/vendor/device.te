@@ -6,6 +6,3 @@ type fingerprint_device, dev_type;
 
 # IR device
 type ir_spi_device, dev_type;
-
-# Touch
-type touchfeature_device, dev_type;
