@@ -25,3 +25,6 @@ ro.fota.oem                    u:object_r:exported_system_prop:s0
 
 # Wi-Fi
 wifi.pktlog.debug.0.chen       u:object_r:exported_system_prop:s0
+
+# 
+ro.factory_mode                u:object_r:exported_default_prop:s0
