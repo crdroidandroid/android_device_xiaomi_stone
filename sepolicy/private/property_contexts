@@ -1,3 +1,8 @@
+# Audio
+ro.qc.sdk.audio.ssr                     u:object_r:exported_system_prop:s0
+ro.qc.sdk.audio.fluencetype             u:object_r:exported_system_prop:s0
+persist.audio.fluence.                  u:object_r:exported_system_prop:s0
+
 # Camera
 camera.                        u:object_r:exported_default_prop:s0
 ro.camera.                     u:object_r:exported_default_prop:s0
