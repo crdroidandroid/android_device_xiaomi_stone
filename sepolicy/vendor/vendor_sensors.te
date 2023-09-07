@@ -1,1 +1,2 @@
 allow vendor_sensors huaqin_sysfs:dir search;
+allow vendor_sensors huaqin_sysfs:file r_file_perms;
