@@ -1,1 +1,1 @@
-allow system_suspend sysfs:dir read;
+dontaudit system_suspend sysfs:dir read;
