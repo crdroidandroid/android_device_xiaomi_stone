@@ -174,7 +174,8 @@ camera.disable_zsl_mode=true
 persist.vendor.charge.oneTrack=true
 
 # SoC
-ro.soc.manufacturer=QTI
+ro.soc.manufacturer=Qualcomm
+ro.soc.model=SM6375
 
 # Crypto
 ro.crypto.dm_default_key.options_format.version=2
