@@ -16,8 +16,6 @@ import android.provider.Settings.Secure;
 public class DT2WServiceSM6375 extends Service {
     private static final String TAG = "DT2WServiceSM6375";
     private Context mContext;
-    private Handler mHandler;
-    private CustomSettingsObserver mCustomSettingsObserver;
 
     @Override
     public IBinder onBind(Intent intent) {
@@ -32,8 +30,8 @@ public class DT2WServiceSM6375 extends Service {
     @Override
     public int onStartCommand(Intent intent, int flags, int startid) {
         mContext = this;
-        mHandler = new Handler(Looper.getMainLooper());
-        mCustomSettingsObserver = new CustomSettingsObserver(mHandler);
+        Handler mHandler = new Handler(Looper.getMainLooper());
+        CustomSettingsObserver mCustomSettingsObserver = new CustomSettingsObserver(mHandler);
         mCustomSettingsObserver.observe();
         mCustomSettingsObserver.update();
         return START_STICKY;
@@ -51,9 +49,9 @@ public class DT2WServiceSM6375 extends Service {
         }
 
         void update() {
-            int dt2wValue = Secure.getInt(mContext.getContentResolver(), Secure.DOUBLE_TAP_TO_WAKE, 0);
-            boolean dt2wEnabled = dt2wValue == 1;
-            SystemProperties.set("persist.sys.sm6375.dt2w", dt2wEnabled ? "1" : "0");
+            ContentResolver resolver = mContext.getContentResolver();
+            int dt2wValue = Secure.getInt(resolver, Secure.DOUBLE_TAP_TO_WAKE, 0) ? 1 : 0;
+            SystemProperties.set("persist.sys.sm6375.dt2w", dt2wValue);
         }
 
         @Override
