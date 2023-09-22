@@ -129,8 +129,9 @@ ro.audio.monitorRotation=true
 persist.vendor.audio.misound.disable=true
 persist.vendor.audio.delta.refresh=true
 
-# Audio volume steps
+# Audio volume
 ro.config.media_vol_steps=15
+ro.config.vc_call_vol_default=9
 ro.config.vc_call_vol_steps=11
 
 # Bluetooth
