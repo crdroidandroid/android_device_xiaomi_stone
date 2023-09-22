@@ -801,4 +801,7 @@
 
     <!-- Enable video pause workaround when enabling/disabling the camera. -->
     <bool name="config_useVideoPauseWorkaround">true</bool>
+    
+    <!-- Preferred max refresh rate at keyguard, if supported by the display. -->
+    <integer name="config_keyguardMaxRefreshRate">60</integer>
 </resources>
