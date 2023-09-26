@@ -50,7 +50,7 @@ public class DT2WServiceSM6375 extends Service {
 
         void update() {
             ContentResolver resolver = mContext.getContentResolver();
-            int dt2wValue = Secure.getInt(resolver, Secure.DOUBLE_TAP_TO_WAKE, 0) ? 1 : 0;
+            String dt2wValue = (Secure.getInt(resolver, Secure.DOUBLE_TAP_TO_WAKE, 0) == 1) ? "1" : "0";
             SystemProperties.set("persist.sys.sm6375.dt2w", dt2wValue);
         }
 
