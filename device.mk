@@ -518,7 +518,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     android.frameworks.sensorservice@1.0.vendor \
     android.hardware.sensors@2.0-ScopedWakelock.vendor \
-    android.hardware.sensors@2.1-service.xiaomi-multihal \
+    android.hardware.sensors-service.xiaomi-multihal \
     libsensorndkbridge
 
 # Soong namespaces
