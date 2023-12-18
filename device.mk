@@ -111,7 +111,10 @@ PRODUCT_PACKAGES += \
     libcamera2ndk_vendor \
     libstdc++_vendor \
     vendor.qti.hardware.camera.device@1.0.vendor \
-    vendor.qti.hardware.camera.postproc@1.0.vendor
+    vendor.qti.hardware.camera.postproc@1.0.vendor \
+    libcamera2ndk_vendor \
+    libion.vendor \
+    libgui_vendor
 
 # Consumer IR
 PRODUCT_PACKAGES += \
@@ -233,7 +236,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hidl.base@1.0 \
     android.hidl.base@1.0.vendor \
+    libhidltransport \
     libhidltransport.vendor \
+    libhwbinder \
     libhwbinder.vendor
 
 # HotwordEnrollement app permissions
