@@ -318,11 +318,11 @@
     <ctl name="ADC2 ChMap" value="ZERO"/>
     <ctl name="ADC3 ChMap" value="ZERO"/>
     <ctl name="ADC4 ChMap" value="ZERO"/>
-    <ctl name="WSA_RX0 Digital Volume" value="84"/>
-    <ctl name="WSA_RX1 Digital Volume" value="84"/>
-    <ctl name="RX_RX0 Digital Volume" value="84"/>
-    <ctl name="RX_RX1 Digital Volume" value="84"/>
-    <ctl name="RX_RX2 Digital Volume" value="84"/>
+    <ctl name="WSA_RX0 Digital Volume" value="94"/>
+    <ctl name="WSA_RX1 Digital Volume" value="94"/>
+    <ctl name="RX_RX0 Digital Volume" value="94"/>
+    <ctl name="RX_RX1 Digital Volume" value="94"/>
+    <ctl name="RX_RX2 Digital Volume" value="94"/>
     <ctl name="HPHL Volume" value="20"/>
     <ctl name="HPHR Volume" value="20"/>
     <ctl name="EAR SPKR PA Gain" value="G_DEFAULT"/>
