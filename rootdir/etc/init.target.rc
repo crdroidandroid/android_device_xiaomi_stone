@@ -59,6 +59,7 @@ on init
 
     wait /dev/block/platform/soc/${ro.boot.bootdevice}
     symlink /dev/block/platform/soc/${ro.boot.bootdevice} /dev/block/bootdevice
+    write /sys/block/sda/queue/iosched/group_idle 0
     start logd
 
 on early-fs
