@@ -247,10 +247,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     IFAAService
 
-# Init scripts
-PRODUCT_PACKAGES += \
-    init.xiaomi.rc
-
 # Input
 PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,$(LOCAL_PATH)/configs/idc/,$(TARGET_COPY_OUT_SYSTEM)/usr/idc) \
@@ -451,6 +447,7 @@ PRODUCT_PACKAGES += \
     init.target.rc \
     ueventd.qcom.rc \
     fstab.zram \
+    init.xiaomi.rc \
     vendor_modprobe.sh
 
 PRODUCT_COPY_FILES += \
