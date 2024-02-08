@@ -239,7 +239,7 @@ BOARD_AVB_RECOVERY_ROLLBACK_INDEX := $(PLATFORM_SECURITY_PATCH_TIMESTAMP)
 BOARD_AVB_RECOVERY_ROLLBACK_INDEX_LOCATION := 1
 
 # VINTF
-DEVICE_MATRIX_FILE += $(DEVICE_PATH)/vintf/compatibility_matrix.xml
+DEVICE_MATRIX_FILE += hardware/qcom-caf/common/compatibility_matrix.xml
 DEVICE_MANIFEST_FILE += \
     $(DEVICE_PATH)/vintf/manifest.xml \
     $(DEVICE_PATH)/vintf/manifest_nfc.xml
