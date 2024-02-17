@@ -154,6 +154,9 @@ on boot
     #ExtR HONGMI-90116,wufa@wingtech.com,add,20210908,add mi_thermal
     chmod 0664 /sys/class/thermal/thermal_message/sconfig
     chown system system /sys/class/thermal/thermal_message/sconfig
+    chmod 0664 /sys/class/thermal/thermal_message/charger_temp
+    chmod 0664 /sys/class/thermal/thermal_message/flash_state
+    chmod 0664 /sys/class/thermal/thermal_message/balance_mode
     chmod 0666 /sys/class/thermal/thermal_message/temp_state
     chown system system /sys/class/thermal/thermal_message/temp_state
 
