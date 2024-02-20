@@ -285,11 +285,6 @@ PRODUCT_PACKAGES += \
 # Kernel
 PRODUCT_SET_DEBUGFS_RESTRICTIONS := true
 
-ifeq ($(PREBUILT_KERNEL),true)
-# Kernel Headers
-PRODUCT_VENDOR_KERNEL_HEADERS := device/xiaomi/stone-kernel/kernel-headers
-endif
-
 # Keylayout
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/keylayout/uinput-goodix.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/uinput-goodix.kl
