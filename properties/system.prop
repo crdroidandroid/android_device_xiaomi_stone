@@ -79,3 +79,6 @@ ro.sf.skip_set_active_mode_when_off=1
 # Fling velocities
 ro.min.fling_velocity=70
 ro.max.fling_velocity=21000
+
+# Disable vsync for cpu rendered apps
+debug.cpurend.vsync=false
