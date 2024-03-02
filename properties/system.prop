@@ -22,7 +22,7 @@ debug.sf.high_fps_early_phase_offset_ns=-4000000
 debug.sf.high_fps_late_app_phase_offset_ns=1000000
 debug.sf.high_fps_late_sf_phase_offset_ns=-4000000
 debug.sf.disable_backpressure=1
-debug.sf.enable_hwc_vds=1
+debug.sf.enable_hwc_vds=0
 ro.sf.force_hwc_brightness=1
 
 # IMS
