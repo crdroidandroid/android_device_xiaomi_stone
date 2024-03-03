@@ -65,6 +65,9 @@
     <!-- Whether show refresh rate QS tile -->
     <bool name="config_showRefreshRateQsTile">true</bool>
     
+    <!-- If not zero, limits the internal screen recorder's framerate to the set value. -->
+    <integer name="config_screenRecorderMaxFramerate">120</integer>
+
     <!-- Default list of files pinned by the Pinner Service -->
     <string-array translatable="false" name="config_defaultPinnerServiceFiles">
         <item>"/system/framework/framework.jar"</item>
@@ -74,4 +77,5 @@
         <item>"/system_ext/priv-app/SystemUIGoogle/SystemUIGoogle.apk"</item>
         <item>"/system/bin/surfaceflinger"</item>
     </string-array>
+
 </resources>
