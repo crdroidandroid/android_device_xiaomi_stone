@@ -225,7 +225,7 @@ ro.surface_flinger.use_content_detection_for_refresh_rate=true
 debug.sf.defer_refresh_rate_when_off=1
 
 # Graphics
-ro.hwui.render_ahead=5
+ro.hwui.render_ahead=10
 debug.sf.enable_egl_image_tracker=1
 debug.hwui.skia_atrace_enabled=false
 debug.renderengine.backend=skiaglthreaded
