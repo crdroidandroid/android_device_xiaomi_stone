@@ -16,3 +16,6 @@ debug.media.transcoding.codec_max_operating_rate_1080P=120
 
 # Declare use of spatial audio
 ro.audio.spatializer_enabled=true
+
+# Phantom process monitoring
+sys.fflag.override.settings_enable_monitor_phantom_procs=false
