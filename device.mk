@@ -524,12 +524,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_BOOT_JARS += \
     telephony-ext
 
-# Trust
-ifneq ($(wildcard hardware/*/interfaces/trust),)
-PRODUCT_PACKAGES += \
-    vendor.lineage.trust@1.0-service
-endif
-
 # Update engine
 PRODUCT_PACKAGES += \
     update_engine \
