@@ -284,10 +284,6 @@ PRODUCT_SET_DEBUGFS_RESTRICTIONS := true
 # Kernel Headers
 PRODUCT_VENDOR_KERNEL_HEADERS := device/xiaomi/stone-kernel/kernel-headers
 
-# Keylayout
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/keylayout/uinput-goodix.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/uinput-goodix.kl
-
 # Keymaster
 PRODUCT_PACKAGES += \
     android.hardware.keymaster@4.1.vendor \
