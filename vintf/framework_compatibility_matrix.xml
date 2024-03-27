@@ -1070,14 +1070,6 @@
             <instance>default</instance>
         </interface>
     </hal>
-    <!-- Health -->
-    <hal format="aidl" optional="true">
-        <name>vendor.lineage.health</name>
-        <interface>
-            <name>IChargingControl</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
     <!-- Trust -->
     <hal format="hidl" optional="true">
         <name>vendor.lineage.trust</name>
