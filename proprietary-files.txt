@@ -1246,6 +1246,9 @@ vendor/etc/media_profiles_blair.xml
 vendor/etc/media_profiles_blair_lite.xml
 vendor/etc/media_profiles_holi.xml
 vendor/etc/media_profiles_vendor.xml
+vendor/etc/seccomp_policy/mediacodec.policy
+vendor/etc/seccomp_policy/mediaextractor.policy
+vendor/etc/seccomp_policy/mediaswcodec.policy
 
 # Mlipay
 vendor/bin/mlipayd@1.1
