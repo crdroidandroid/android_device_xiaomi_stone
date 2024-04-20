@@ -19,4 +19,6 @@ PRODUCT_DEVICE := stone
 PRODUCT_MANUFACTURER := Xiaomi
 PRODUCT_BRAND := Xiaomi
 
+BUILD_FINGERPRINT := POCO/moonstone_p_global/moonstone:14/UKQ1.231003.002/V816.0.3.0.UMPMIXM:user/release-keys
+
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
