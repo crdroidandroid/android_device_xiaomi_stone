@@ -492,3 +492,6 @@ firmware_directories /vendor/firmware_mnt/image/
 
 # Charger
 /sys/class/power_supply/battery  input_suspend  0660  system  system
+
+# HBM
+/sys/class/drm/card0/card0-DSI-1                        hbm                      	0666    system  system

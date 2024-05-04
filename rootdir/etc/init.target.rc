@@ -60,6 +60,9 @@ on init
     wait /dev/block/platform/soc/${ro.boot.bootdevice}
     symlink /dev/block/platform/soc/${ro.boot.bootdevice} /dev/block/bootdevice
     start logd
+    
+    chown system system /sys/class/drm/card0/card0-DSI-1/hbm
+    chmod 0664 /sys/class/drm/card0/card0-DSI-1/hbm
 
 on early-fs
     start vold
