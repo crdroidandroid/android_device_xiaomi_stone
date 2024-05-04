@@ -15,3 +15,6 @@ allow untrusted_app qemu_hw_prop:file { read };
 allow untrusted_app qemu_sf_lcd_density_prop:file { read };
 allow untrusted_app serialno_prop:file { read };
 allow untrusted_app proc_max_map_count:file { read };
+
+allow untrusted_app vendor_sysfs_devfreq:dir search;
+allow untrusted_app vendor_sysfs_kgsl_gpuclk:file read;
