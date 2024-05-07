@@ -428,6 +428,7 @@ PRODUCT_PACKAGES += \
     init.qti.kernel.sh \
     init.target.rc \
     ueventd.qcom.rc \
+    fstab.zram \
     vendor_modprobe.sh
 
 PRODUCT_COPY_FILES += \
