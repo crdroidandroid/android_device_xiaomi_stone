@@ -1,1 +1,1 @@
-require board=moonstone|sunstone
+require board=moonstone|sunstone|stone
