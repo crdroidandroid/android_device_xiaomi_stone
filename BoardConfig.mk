@@ -86,6 +86,10 @@ TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):init_stone
 TARGET_RECOVERY_DEVICE_MODULES := init_stone
 
 # Kernel
+
+# Fix prebuilt build
+$(shell mkdir -p $(OUT_DIR)/target/product/stone/obj/KERNEL_OBJ/usr)
+
 BOARD_INCLUDE_DTB_IN_BOOTIMG := true
 BOARD_KERNEL_BASE := 0x00000000
 BOARD_KERNEL_IMAGE_NAME := Image
