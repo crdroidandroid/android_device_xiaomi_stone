@@ -3,6 +3,7 @@ allow system_app sysfs_thermal:file rw_file_perms;
 allow system_app proc_pagetypeinfo:file r_file_perms;
 allow system_app sysfs_zram:dir search;
 allow system_app sysfs_zram:file r_file_perms;
+allow system_app sysfs_zram:dir r_dir_perms;
 
 # vendor_aware_prop
 get_prop(system_app, vendor_aware_available_prop);
