@@ -258,6 +258,9 @@ PRODUCT_PACKAGES += \
 # Kernel
 PRODUCT_SET_DEBUGFS_RESTRICTIONS := true
 
+# Kernel Headers
+PRODUCT_VENDOR_KERNEL_HEADERS := device/xiaomi/stone-kernel/kernel-headers
+
 # Keymaster
 PRODUCT_PACKAGES += \
     android.hardware.keymaster@4.1.vendor
