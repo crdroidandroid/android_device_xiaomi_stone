@@ -167,6 +167,8 @@ ro.bluetooth.a2dp_offload.supported=true
 ro.vendor.bluetooth.defaultabsvol=false
 persist.bluetooth.disableabsvol=true
 persist.vendor.bluetooth.modem_nv_support=true
+vendor.qcom.bluetooth.soc=cherokee
+ro.vendor.fm.use_audio_session=true
 
 # Camera
 camera.disable_zsl_mode=true
