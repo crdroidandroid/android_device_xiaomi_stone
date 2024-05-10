@@ -33,7 +33,6 @@ persist.log.tag.cnss-daemon=S
 persist.log.tag.CVP=S
 persist.log.tag.DeviceStatisticsService=S
 persist.log.tag.DrmLibTime=S
-persist.log.tag.FastChargingPreferenceController=S
 persist.log.tag.QC-time-services=S
 persist.log.tag.ResourcesCompat=S
 persist.log.tag.SYNX-UMD=S
