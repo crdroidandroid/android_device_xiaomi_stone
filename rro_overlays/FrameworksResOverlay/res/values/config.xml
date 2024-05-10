@@ -788,5 +788,11 @@
          your device's memory use without going to the point of causing applications to turn
          off features. -->
     <bool name="config_avoidGfxAccel">true</bool>
+    
+    <!-- Path to fast charging status file to detect whether an oem fast charger is active -->
+    <string name="config_oemFastChargerStatusPath" translatable="false">/sys/class/power_supply/usb/quick_charge_type</string>
+
+    <!-- Expected value from fast charging status file  -->
+    <string name="config_oemFastChargerStatusValue" translatable="false">3</string>
 
 </resources>
