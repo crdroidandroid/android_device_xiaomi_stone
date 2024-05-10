@@ -356,6 +356,9 @@
         <item>"/system_ext/priv-app/SystemUIGoogle/SystemUIGoogle.apk"</item>
     </string-array>
 
+    <!-- Bytes that the PinnerService will pin for Home app -->
+    <integer name="config_pinnerHomePinBytes">6291456</integer>
+
     <!-- The default peak refresh rate. -->
     <integer name="config_defaultPeakRefreshRate">120</integer>
 
@@ -581,7 +584,7 @@
 
     <!-- Whether device supports double tap to wake -->
     <bool name="config_supportDoubleTapWake">true</bool>
-    
+
     <!-- The duration (in milliseconds) that should be applied to waveform vibrations that ends in
          non-zero amplitudes, to bring the vibrator amplitude down to zero using this timing. -->
     <integer name="config_vibrationWaveformRampDownDuration">20</integer>
@@ -629,5 +632,5 @@
 
     <!-- Expected value from fast charging status file  -->
     <string name="config_oemFastChargerStatusValue" translatable="false">3</string>
-    
+
 </resources>
