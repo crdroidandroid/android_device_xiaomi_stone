@@ -1124,7 +1124,7 @@ system_ext/lib64/lib-imsvtutils.so
 system_ext/lib64/libimscamera_jni.so
 system_ext/lib64/libimsmedia_jni.so
 system_ext/lib64/vendor.qti.imsrtpservice@3.0.so
--system_ext/priv-app/ims/ims.apk|101f8487b5954514421a3956cef437852bf05e0b
+system_ext/priv-app/ims/ims.apk|5b01b7d13cc7add754a38ecdb0d0490511e41358
 -vendor/app/IWlanService/IWlanService.apk
 vendor/bin/ims_rtp_daemon
 vendor/bin/imsdaemon
@@ -1384,6 +1384,7 @@ vendor/lib64/libqmiservices.so
 
 # RIL
 etc/permissions/privapp-permissions-qti.xml
+system_ext/app/QtiTelephony/QtiTelephony.apk|ea1f0e8518f1d4b53abcf4ae9c977e2b6a303323
 -system_ext/app/QtiTelephonyService/QtiTelephonyService.apk
 -system_ext/app/atfwd/atfwd.apk
 system_ext/etc/permissions/privapp-permissions-qti-system-ext.xml
