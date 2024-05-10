@@ -148,6 +148,9 @@ on boot
 # Health
     chmod 0660 /sys/class/power_supply/battery/input_suspend
     chown system system /sys/class/power_supply/battery/input_suspend
+    
+    chmod 0660 /sys/class/power_supply/usb/quick_charge_type
+    chown system system /sys/class/power_supply/usb/quick_charge_type
 
     write /dev/cpuset/audio-app/cpus 1-2
     # Add a cpuset for the camera daemon
