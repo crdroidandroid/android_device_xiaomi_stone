@@ -354,13 +354,13 @@ DEVICE_PACKAGE_OVERLAYS += \
 
 # Overlays RRO
 PRODUCT_PACKAGES += \
-    CarrierConfigOverlay \
-    WifiOverlay \
-    FrameworksResOverlay \
-    SettingsOverlay \
-    SettingsProviderOverlay \
-    SystemUIOverlay \
-    TelephonyOverlay
+    CarrierConfigOverlayStone \
+    WifiOverlayStone \
+    FrameworksResOverlayStone \
+    SettingsOverlayStone \
+    SettingsProviderOverlayStone \
+    SystemUIOverlayStone \
+    TelephonyOverlayStone
 
 # Partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true

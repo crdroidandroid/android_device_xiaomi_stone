@@ -11,10 +11,11 @@
      limitations under the License.
 -->
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.android.systemui.overlay">
+    package="com.android.frameworksres.overlay.stone">
+
     <application android:hasCode="false" />
     <overlay
-      android:targetPackage="com.android.systemui"
+      android:targetPackage="android"
       android:isStatic="true"
       android:priority="1"/>
 </manifest>

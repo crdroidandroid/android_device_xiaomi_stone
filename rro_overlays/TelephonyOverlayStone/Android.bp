@@ -1,5 +1,5 @@
 runtime_resource_overlay {
-    name: "SystemUIOverlay",
+    name: "TelephonyOverlayStone",
     sdk_version: "current",
     resource_dirs: ["res"],
     vendor: true,
