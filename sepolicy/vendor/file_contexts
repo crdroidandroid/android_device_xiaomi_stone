@@ -110,6 +110,9 @@
 /sys/devices/platform/soc/soc:simtray/status                            u:object_r:sysfs_simtray_status:s0
 /sys/devices/platform/soc/4c88000.i2c/i2c-2/2-0038/fts_edge_mode        u:object_r:vendor_sysfs_sensors:s0
 
+# Fastcharge HAL
+/(vendor|system/vendor)/bin/hw/vendor\.lineage\.fastcharge@[0-9]\.[0-9]-service\.stone         u:object_r:hal_lineage_fastcharge_default_exec:s0
+
 # Fingerprint
 /dev/goodix_fp                                                                                                                 u:object_r:fingerprint_device:s0
 /dev/silead_fp                                                                                                                 u:object_r:fingerprint_device:s0
