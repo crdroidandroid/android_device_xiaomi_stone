@@ -24,6 +24,15 @@
             <instance>default</instance>
         </interface>
     </hal>
+    <hal format="hidl" optional="false">
+        <name>vendor.lineage.fastcharge</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>IRestrictedCurrent</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
     <hal format="hidl" optional="true">
         <name>android.hardware.gnss</name>
         <version>1.0-1</version>
