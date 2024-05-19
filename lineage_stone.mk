@@ -14,6 +14,11 @@ $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 # Inherit from stone device
 $(call inherit-product, device/xiaomi/stone/device.mk)
 
+# Inherit some common crDroid stuff
+TARGET_SUPPORTS_QUICK_TAP  := true
+TARGET_SUPPORTS_CALL_RECORDING := true
+TARGET_INCLUDE_PIXEL_CHARGER := true
+
 PRODUCT_NAME := lineage_stone
 PRODUCT_DEVICE := stone
 PRODUCT_MANUFACTURER := Xiaomi
