@@ -60,9 +60,6 @@ on init
     wait /dev/block/platform/soc/${ro.boot.bootdevice}
     symlink /dev/block/platform/soc/${ro.boot.bootdevice} /dev/block/bootdevice
     start logd
-    
-    chown system system /sys/class/drm/card0/card0-DSI-1/hbm
-    chmod 0664 /sys/class/drm/card0/card0-DSI-1/hbm
 
 on early-fs
     start vold
@@ -170,13 +167,7 @@ on boot
     setprop vendor.usb.controller 4e00000.dwc3
 
     #ExtR HONGMI-90116,wufa@wingtech.com,add,20210908,add mi_thermal
-    chmod 0664 /sys/class/thermal/thermal_message/sconfig
     chown system system /sys/class/thermal/thermal_message/sconfig
-    chmod 0664 /sys/class/thermal/thermal_message/charger_temp
-    chmod 0664 /sys/class/thermal/thermal_message/flash_state
-    chmod 0664 /sys/class/thermal/thermal_message/balance_mode
-    chmod 0666 /sys/class/thermal/thermal_message/temp_state
-    chown system system /sys/class/thermal/thermal_message/temp_state
 
 # add dual
     mkdir /mnt/vendor/persist/camera 0777 system system

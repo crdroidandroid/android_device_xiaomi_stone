@@ -4,15 +4,6 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-# Call the MiuiCamera setup
-$(call inherit-product-if-exists, vendor/xiaomi/stone-miuicamera/miuicamera.mk)
-
-# Call the ViperFX Config
-$(call inherit-product-if-exists, packages/apps/ViPER4AndroidFX/config.mk)
-
-# Vendor Dolby
-$(call inherit-product-if-exists, vendor/dolby/dolby.mk)
-
 # Enable project quotas and casefolding for emulated storage without sdcardfs
 $(call inherit-product, $(SRC_TARGET_DIR)/product/emulated_storage.mk)
 
@@ -129,10 +120,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.ir@1.0-impl \
     android.hardware.ir@1.0-service
-
-# Device-specific settings
-PRODUCT_PACKAGES += \
-    XiaomiParts
 
 # Dex
 PRODUCT_ART_TARGET_INCLUDE_DEBUG_BUILD := false
@@ -456,12 +443,6 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/permissions/telephony_system-ext_privapp-permissions-qti.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/telephony_system-ext-privapp-permissions-qti.xml
-
-# Remove unwanted packages
-ifeq ($(TARGET_DEBLOAT),true)
-PRODUCT_PACKAGES += \
-    RemovePackages   
-endif
 
 # RIL
 PRODUCT_PACKAGES += \
