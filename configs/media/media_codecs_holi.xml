@@ -79,7 +79,6 @@
 
 <MediaCodecs>
     <Include href="media_codecs_google_audio.xml" />
-    <Include href="media_codecs_dolby_audio.xml" />
     <Include href="media_codecs_vendor_audio.xml" />
     <Include href="media_codecs_google_telephony.xml" />
     <Settings>
