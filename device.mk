@@ -114,10 +114,12 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.camera.postproc@1.0.vendor \
     libcamera2ndk_vendor \
     libion.vendor \
-    libgui_vendor
+    libgui_vendor \
+    libpng.vendor
 
 PRODUCT_PACKAGES += \
-    libpiex_shim
+    libpiex_shim \
+    libutilscallstack.vendor
 
 # Consumer IR
 PRODUCT_PACKAGES += \
@@ -322,7 +324,8 @@ PRODUCT_PACKAGES += \
 
 # Net
 PRODUCT_PACKAGES += \
-    android.system.net.netd@1.1.vendor
+    android.system.net.netd@1.1.vendor \
+    libnetutils.vendor
 
 # Neural networks
 PRODUCT_PACKAGES += \
@@ -454,6 +457,11 @@ PRODUCT_PACKAGES += \
     libprotobuf-cpp-full-3.9.1-vendorcompat \
     libprotobuf-cpp-lite-3.9.1-vendorcompat \
     librmnetctl
+
+PRODUCT_PACKAGES += \
+    libcurl.vendor \
+    libjsoncpp.vendor \
+    libsqlite.vendor
 
 PRODUCT_PACKAGES += \
     android.hardware.radio@1.6.vendor \
