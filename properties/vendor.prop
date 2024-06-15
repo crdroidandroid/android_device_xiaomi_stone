@@ -171,6 +171,7 @@ ro.vendor.fm.use_audio_session=true
 
 # Camera
 camera.disable_zsl_mode=true
+vendor.camera.aux.packageexcludelist=org.telegram.messenger,org.thunderdog.challegram,us.zoom.videomeetings
 
 # Charger
 persist.vendor.charge.oneTrack=true
