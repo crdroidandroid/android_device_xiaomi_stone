@@ -692,5 +692,9 @@
 
     <!-- Expected value from fast charging status file  -->
     <string name="config_oemFastChargerStatusValue" translatable="false">3</string>
-    
+
+    <!-- SQLite -->
+    <string name="db_default_journal_mode" translatable="false">MEMORY</string>
+    <string name="db_default_sync_mode" translatable="false">OFF</string>
+    <string name="db_wal_sync_mode" translatable="false">OFF</string>
 </resources>
