@@ -2,7 +2,7 @@
      Copyright (C) 2019-2020 The Linux Foundation
      SPDX-License-Identifier: BSD-3-Clause
 -->
-<manifest version="2.0" type="device" target-level="5">
+<manifest version="2.0" type="device" target-level="6">
     <hal format="hidl">
         <name>android.hardware.audio</name>
         <transport>hwbinder</transport>
@@ -285,5 +285,4 @@
         <transport>hwbinder</transport>
         <fqname>@1.0::IQspmhal/default</fqname>
     </hal>
-    <kernel target-level="5"/>
 </manifest>
