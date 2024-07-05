@@ -38,7 +38,6 @@ vendor.audio_hal.in_period_size=144
 vendor.audio_hal.period_multiplier=3
 vendor.audio.adm.buffering.ms=2
 vendor.audio.volume.headset.gain.depcal=true
-debug.stagefright.omx_default_rank=0
 ro.vendor.audio.ring.filter=true
 persist.vendor.audio.ring.filter.mask=0
 vendor.audio.hal.output.suspend.supported=true
@@ -285,8 +284,6 @@ ro.hwui.render_ahead=10
 
 # Media
 debug.stagefright.c2inputsurface=-1
-debug.stagefright.ccodec=4
-debug.stagefright.omx_default_rank=0
 
 # NFC
 ro.vendor.se.type=HCE,UICC
