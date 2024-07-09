@@ -16,3 +16,6 @@ debug.media.transcoding.codec_max_operating_rate_1080P=120
 
 # Phantom process monitoring
 sys.fflag.override.settings_enable_monitor_phantom_procs=false
+
+## FUSE
+persist.sys.fuse.passthrough.enable=true
