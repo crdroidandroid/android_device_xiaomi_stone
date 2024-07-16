@@ -7,6 +7,9 @@
 # Enable project quotas and casefolding for emulated storage without sdcardfs
 $(call inherit-product, $(SRC_TARGET_DIR)/product/emulated_storage.mk)
 
+# A/B
+$(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota.mk)
+
 PRODUCT_SHIPPING_API_LEVEL := 30
 
 # Device uses high-density artwork where available
@@ -29,9 +32,6 @@ AB_OTA_POSTINSTALL_CONFIG += \
 PRODUCT_PACKAGES += \
     checkpoint_gc \
     otapreopt_script
-
-# A/B
-$(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota.mk)
 
 # ART
 ART_BUILD_TARGET_NDEBUG := true
@@ -258,13 +258,9 @@ PRODUCT_PACKAGES += \
     IPACM_cfg.xml
 
 # Kernel
-PRODUCT_SET_DEBUGFS_RESTRICTIONS := true
-
-# Kernel Headers
-PRODUCT_VENDOR_KERNEL_HEADERS := device/xiaomi/stone-kernel/kernel-headers
-
-# Kernel
 PRODUCT_ENABLE_UFFD_GC := false
+PRODUCT_SET_DEBUGFS_RESTRICTIONS := true
+PRODUCT_VENDOR_KERNEL_HEADERS := device/xiaomi/stone-kernel/kernel-headers
 
 # Keymaster
 PRODUCT_PACKAGES += \
