@@ -74,6 +74,9 @@ on boot
     chown system system /sys/class/touch/touch_dev/palm_sensor
     chmod 0664 /sys/class/touch/touch_dev/palm_sensor
 
+# Enable PowerHAL hint processing
+    setprop vendor.powerhal.init 1
+
 on property:sys.tp.grip_enable=0
     write /sys/devices/platform/soc/4c88000.i2c/i2c-2/2-0038/fts_edge_mode 0
 
