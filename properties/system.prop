@@ -48,6 +48,12 @@ persist.log.tag.SYNX-UMD=S
 persist.log.tag.ultrasound_extn=S
 persist.log.tag.slpi=S
 persist.log.tag.RBS=S
+persist.log.tag.BatteryManagerService=S
+persist.log.tag.BatteryService=S
+persist.log.tag.BatteryStats=S
+persist.log.tag.sm5602=S
+persist.log.tag.batt_chg=S
+persist.log.tag.bq25890-charger=S
 
 # IMS Debugging
 persist.vendor.ims.disableADBLogs=1
