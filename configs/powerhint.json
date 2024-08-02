@@ -90,30 +90,6 @@
       "ResetOnInit": true
     },
     {
-      "Name": "UclampTAMin",
-      "Path": "/dev/cpuctl/top-app/cpu.uclamp.min",
-      "Values": [
-        "0",
-        "692",
-        "308",
-        "232",
-        "154",
-        "78"
-      ],
-      "DefaultIndex": 0,
-      "ResetOnInit": true
-    },
-    {
-      "Name": "UclampFgMin",
-      "Path": "/dev/cpuctl/foreground/cpu.uclamp.min",
-      "Values": [
-        "0",
-        "159"
-      ],
-      "DefaultIndex": 0,
-      "ResetOnInit": true
-    },
-    {
       "Name": "GPUMaxFreq",
       "Path": "/sys/class/kgsl/kgsl-3d0/devfreq/max_freq",
       "Values": [
@@ -330,12 +306,6 @@
     },
     {
       "PowerHint": "INTERACTION",
-      "Node": "UclampTAMin",
-      "Duration": 0,
-      "Value": "78"
-    },
-    {
-      "PowerHint": "INTERACTION",
       "Node": "CPUBWHystTriggerCount",
       "Duration": 0,
       "Value": "0"
@@ -440,18 +410,6 @@
       "Node": "CPULittleClusterMinFreq",
       "Duration": 5000,
       "Value": "9999999"
-    },
-    {
-      "PowerHint": "LAUNCH",
-      "Node": "UclampTAMin",
-      "Duration": 5000,
-      "Value": "692"
-    },
-    {
-      "PowerHint": "LAUNCH",
-      "Node": "UclampFgMin",
-      "Duration": 5000,
-      "Value": "159"
     },
     {
       "PowerHint": "LAUNCH",
@@ -584,12 +542,6 @@
       "Node": "GPUMaxFreq",
       "Duration": 0,
       "Value": "840000000"
-    },
-    {
-      "PowerHint": "DISABLE_TA_BOOST",
-      "Node": "UclampTAMin",
-      "Duration": 0,
-      "Value": "0"
     },
     {
       "PowerHint": "DISPLAY_IDLE",
