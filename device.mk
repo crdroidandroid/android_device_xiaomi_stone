@@ -267,6 +267,10 @@ PRODUCT_PACKAGES += \
     ipacm \
     IPACM_cfg.xml
 
+# IRQ
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/msm_irqbalance.conf:$(TARGET_COPY_OUT_VENDOR)/etc/msm_irqbalance.conf
+
 # Kernel
 PRODUCT_ENABLE_UFFD_GC := false
 PRODUCT_SET_DEBUGFS_RESTRICTIONS := true
