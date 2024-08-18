@@ -68,5 +68,9 @@
         <item>0</item>
         <item>0</item>
     </integer-array>
+    
+     <!-- Preferred refresh rate at keyguard, if supported by the display. Overrides
+          keyguardMaxRefreshRate. -->
+     <integer name="config_keyguardRefreshRate">60</integer>
 
 </resources>
