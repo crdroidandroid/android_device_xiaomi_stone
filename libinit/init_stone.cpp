@@ -10,8 +10,8 @@
 
 #include "vendor_init.h"
 
-#define FINGERPRINT_GL "POCO/moonstone_p_global/moonstone:14/UKQ1.231003.002/V816.0.6.0.UMPMIXM:user/release-keys"
-#define FINGERPRINT_CN "Redmi/sunstone/sunstone:14/UKQ1.230917.001/V816.0.2.0.UMQCNXM:user/release-keys"
+#define FINGERPRINT_GL "POCO/moonstone_p_global/moonstone:14/UKQ1.231003.002/V816.0.7.0.UMPMIXM:user/release-keys"
+#define FINGERPRINT_CN "Redmi/sunstone_global/sunstone:14/UKQ1.230917.001/V816.0.5.0.UMQMIXM:user/release-keys"
 
 static const variant_info_t stone_global_info = {
     .hwc_value = "",
