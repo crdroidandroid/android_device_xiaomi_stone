@@ -316,11 +316,6 @@ ro.vendor.radio.5g=3
 ro.vendor.use_data_netmgrd=true
 telephony.lteOnCdmaDevice=1
 
-# Perf
-ro.vendor.extension_library=libqti-perfd-client.so
-ro.vendor.perf-hal.ver=2.2
-ro.vendor.perf.scroll_opt=true
-
 # Sensors
 persist.vendor.sensors.debug.ssc_qmi_debug=true
 persist.vendor.sensors.hal_trigger_ssr=false
