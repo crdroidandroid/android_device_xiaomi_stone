@@ -454,10 +454,25 @@
                 <string ...>M -5,0 L -5,10 L 5,10 L 5,0 Z @dp</string>
          @see https://www.w3.org/TR/SVG/paths.html#PathData
          -->
-    <string name="config_mainBuiltInDisplayCutout">M 559,65 A 19,19 0 0 1 540,83 19,19 0 0 1 521,65 19,19 0 0 1 540,46 19,19 0 0 1 559,65 Z @left</string>
+    <string name="config_mainBuiltInDisplayCutout" translatable="false">
+        M -25,52
+        a 25,25 0 1,0 50,0
+        a 25,25 0 1,0 -50,0
+    </string>
 
-    <!-- Whether device has a physical display cutout -->
-    <bool name="config_physicalDisplayCutout">true</bool>
+    <string name="config_mainBuiltInDisplayCutoutRectApproximation" translatable="false">
+        M 0,0
+        H -25
+        V 77
+        H 25
+        V 0
+        H 0
+    </string>
+    
+    <!-- Whether the display cutout region of the main built-in display should be forced to
+         black in software (to avoid aliasing or emulate a cutout that is not physically existent).
+     -->
+    <bool name="config_fillMainBuiltInDisplayCutout">true</bool>
 
     <!-- The default refresh rate. Moonstone manages this using the peak refresh rate setting, so set
          this value to 0 so it has no effect. -->
