@@ -102,3 +102,6 @@ debug.cpurend.vsync=false
 
 # Disable MTE Async for system server
 arm64.memtag.process.system_server=off
+
+# Disable Skia tracing by default
+debug.hwui.skia_atrace_enabled=false
