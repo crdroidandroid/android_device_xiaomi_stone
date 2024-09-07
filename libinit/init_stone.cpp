@@ -10,8 +10,11 @@
 
 #include "vendor_init.h"
 
-#define FINGERPRINT_GL "POCO/moonstone_p_global/moonstone:14/UKQ1.231003.002/V816.0.7.0.UMPMIXM:user/release-keys"
-#define FINGERPRINT_CN "Redmi/sunstone_global/sunstone:14/UKQ1.230917.001/V816.0.5.0.UMQMIXM:user/release-keys"
+#define FINGERPRINT_MOON_GL "POCO/moonstone_p_global/moonstone:14/UKQ1.231003.002/V816.0.8.0.UMPMIXM:user/release-keys"
+#define FINGERPRINT_MOON_IN "POCO/moonstone/moonstone:14/UKQ1.231003.002/V816.0.6.0.UMPINXM:user/release-keys"
+#define FINGERPRINT_SUN_GL "Redmi/sunstone_global/sunstone:14/UKQ1.230917.001/V816.0.5.0.UMQMIXM:user/release-keys"
+#define FINGERPRINT_SUN_IN "Redmi/sunstone/sunstone:14/UKQ1.230917.001/V816.0.4.0.UMQINXM:user/release-keys"
+#define FINGERPRINT_SUN_CN "Redmi/sunstone/sunstone:14/UKQ1.230917.001/V816.0.3.0.UMQCNXM:user/release-keys"
 
 static const variant_info_t stone_global_info = {
     .hwc_value = "",
@@ -21,7 +24,7 @@ static const variant_info_t stone_global_info = {
     .device = "moonstone",
     .model = "POCO X5 5G",
     .mod_device = "moonstone_p_global",
-    .build_fingerprint = FINGERPRINT_GL,
+    .build_fingerprint = FINGERPRINT_MOON_GL,
 };
 
 static const variant_info_t stone_in_info = {
@@ -33,7 +36,7 @@ static const variant_info_t stone_in_info = {
     .model = "POCO X5 5G",
 //  .mod_device = "moonstone_in_global",
     .mod_device = "moonstone_p_global", // Fixed miuicamera crash
-    .build_fingerprint = FINGERPRINT_GL,
+    .build_fingerprint = FINGERPRINT_MOON_IN,
 };
 
 static const variant_info_t sunstone_cn_info = {
@@ -45,7 +48,7 @@ static const variant_info_t sunstone_cn_info = {
     .model = "Redmi Note 12 5G",
 //  .mod_device = "moonstone",
     .mod_device = "moonstone_global", // Fixed miuicamera crash
-    .build_fingerprint = FINGERPRINT_CN,
+    .build_fingerprint = FINGERPRINT_SUN_CN,
 };
 
 static const variant_info_t sunstone_global_info = {
@@ -57,7 +60,7 @@ static const variant_info_t sunstone_global_info = {
     .model = "Redmi Note 12 5G",
 //  .mod_device = "moonstone",
     .mod_device = "moonstone_global", // Fixed miuicamera crash
-    .build_fingerprint = FINGERPRINT_CN,
+    .build_fingerprint = FINGERPRINT_SUN_GL,
 };
 
 static const variant_info_t sunstone_in_info = {
@@ -69,7 +72,7 @@ static const variant_info_t sunstone_in_info = {
     .model = "Redmi Note 12 5G",
 //  .mod_device = "moonstone",
     .mod_device = "moonstone_global", // Fixed miuicamera crash
-    .build_fingerprint = FINGERPRINT_CN,
+    .build_fingerprint = FINGERPRINT_SUN_IN,
 };
 
 static const variant_info_t sunstone_x_info = {
@@ -81,7 +84,7 @@ static const variant_info_t sunstone_x_info = {
     .model = "Redmi Note 12R Pro",
 //  .mod_device = "moonstone",
     .mod_device = "moonstone_global", // Fixed miuicamera crash
-    .build_fingerprint = FINGERPRINT_CN,
+    .build_fingerprint = FINGERPRINT_SUN_CN,
 };
 
 static const std::vector<variant_info_t> variants = {
