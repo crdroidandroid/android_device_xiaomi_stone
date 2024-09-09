@@ -104,4 +104,5 @@ debug.cpurend.vsync=false
 arm64.memtag.process.system_server=off
 
 # Disable Skia tracing by default
-debug.hwui.skia_atrace_enabled=false
+debug.hwui.skia_tracing_enabled=false
+debug.hwui.skia_use_perfetto_track_events=false
