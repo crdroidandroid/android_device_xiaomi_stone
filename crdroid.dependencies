@@ -11,9 +11,5 @@
   {
     "repository": "crdroidandroid/android_kernel_xiaomi_stone",
     "target_path": "device/xiaomi/stone-kernel"
-  },
-  {
-    "repository": "crdroidandroid/android_kernel_qcom_sm8350",
-    "target_path": "kernel/xiaomi/sm6375"
   }
 ]
