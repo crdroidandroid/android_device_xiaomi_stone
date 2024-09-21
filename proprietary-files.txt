@@ -1,4 +1,4 @@
-# All unpinned blobs below are extracted from moonstone V816.0.7.0.UMPMIXM release-keys
+# All unpinned blobs below are extracted from moonstone V816.0.8.0.UMPMIXM release-keys
 
 # ACDB
 vendor/etc/acdbdata/MTP/MTP_Bluetooth_cal.acdb
