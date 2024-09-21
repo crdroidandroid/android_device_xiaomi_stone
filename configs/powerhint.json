@@ -64,6 +64,7 @@
         "9999999",
         "2054400",
         "1651200",
+        "1401600",
         "1228800",
         "691200",
         "0"
@@ -208,6 +209,7 @@
       "Path": "/sys/class/devfreq/soc:qcom,cpu0-cpu-ddr-lat/min_freq",
       "Values": [
         "7980",
+        "5161",
         "3879",
         "762"
       ],
@@ -218,6 +220,7 @@
       "Path": "/sys/class/devfreq/soc:qcom,cpu6-cpu-ddr-lat/min_freq",
       "Values": [
         "7980",
+        "5161",
         "3879",
         "762"
       ],
@@ -228,6 +231,7 @@
       "Path": "/sys/class/devfreq/soc:qcom,cpu0-cpu-ddr-latfloor/min_freq",
       "Values": [
         "7980",
+        "5161",
         "3879",
         "762"
       ],
@@ -238,6 +242,7 @@
       "Path": "/sys/class/devfreq/soc:qcom,cpu6-cpu-ddr-latfloor/min_freq",
       "Values": [
         "7980",
+        "5161",
         "3879",
         "762"
       ],
