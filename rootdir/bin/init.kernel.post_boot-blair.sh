@@ -74,8 +74,8 @@ function configure_zram_parameters() {
 function configure_memory_parameters() {
 	# Set Memory parameters.
 
-	# Set swappiness to 100 for all targets
-	echo 100 > /proc/sys/vm/swappiness
+	# Set swappiness to 60 for all targets
+	echo 60 > /proc/sys/vm/swappiness
 
 	# Set lz4 algorithm for zRAM compression
 	echo lz4 > /sys/block/zram0/comp_algorithm
