@@ -216,7 +216,7 @@ PRODUCT_PACKAGES += \
     android.hardware.ir-service.lineage
 
 # Kernel
-PRODUCT_ENABLE_UFFD_GC := false
+PRODUCT_ENABLE_UFFD_GC := true
 
 # Keymaster
 PRODUCT_PACKAGES += \
