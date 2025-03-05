@@ -1,4 +1,4 @@
-# All unpinned blobs below are extracted from sunstone:14/OS1.0.9.0.UMQMIXM:user/release-keys
+# All unpinned blobs below are extracted from sunstone:14/OS1.0.10.0.UMQMIXM:user/release-keys
 
 # Current blobs with ELF checks disabled:
 # libcne, libwqe, lowi-server, mutualex depend on libwpa_client, which is a gnu makefile target

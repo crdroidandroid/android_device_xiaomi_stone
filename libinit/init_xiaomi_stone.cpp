@@ -42,7 +42,7 @@ void vendor_load_properties() {
             "sunstone",
             "Redmi Note 12 5G",
             "_blair_lite",
-            "Redmi/sunstone_global/sunstone:14/UKQ1.230917.001/V816.0.9.0.UMQMIXM:user/release-keys"
+            "Redmi/sunstone_global/sunstone:14/UKQ1.230917.001/V816.0.10.0.UMQMIXM:user/release-keys"
         },
         { //SUNSTONE_IN
             "sunstone_in",
