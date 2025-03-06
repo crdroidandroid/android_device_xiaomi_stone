@@ -18,6 +18,8 @@ $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 TARGET_SCREEN_HEIGHT := 2400
 TARGET_SCREEN_WIDTH := 1080
 
+TARGET_EXCLUDES_AUDIOFX := true
+
 PRODUCT_BRAND := Redmi
 PRODUCT_DEVICE := stone
 PRODUCT_MANUFACTURER := Xiaomi
