@@ -1,0 +1,15 @@
+[
+  {
+    "repository": "LineageOS/android_hardware_xiaomi",
+    "target_path": "hardware/xiaomi",
+    "branch": "lineage-22.2"
+  },
+  {
+    "repository": "crdroidandroid/proprietary_vendor_xiaomi-stone",
+    "target_path": "vendor/xiaomi/stone"
+  },
+  {
+    "repository": "crdroidandroid/android_kernel_xiaomi_stone",
+    "target_path": "device/xiaomi/stone-kernel"
+  }
+]
