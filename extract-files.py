@@ -52,6 +52,8 @@ blob_fixups: blob_fixups_user_type = {
         .regex_replace('0x1F', '0x0'),
     'vendor/etc/libnfc-hal-st.conf': blob_fixup()
         .regex_replace('STNFC_HAL_LOGLEVEL=0x13', 'STNFC_HAL_LOGLEVEL=0x12'),
+    'vendor/etc/public.libraries.txt': blob_fixup()
+        .regex_replace('.*libqti-perfd-client.so.*\n?', ''),
     ('vendor/lib64/libalLDC.so', 'vendor/lib64/libalhLDC.so'): blob_fixup()
         .clear_symbol_version('AHardwareBuffer_allocate')
         .clear_symbol_version('AHardwareBuffer_describe')
