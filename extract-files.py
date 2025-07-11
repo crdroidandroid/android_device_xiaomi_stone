@@ -35,10 +35,8 @@ lib_fixups: lib_fixups_user_type = {
     **lib_fixups,
     (
         'com.qualcomm.qti.dpm.api@1.0',
-        'libmmosal',
         'vendor.qti.diaghal@1.0',
         'vendor.qti.hardware.fm@1.0',
-        'vendor.qti.hardware.wifidisplaysession@1.0',
         'vendor.qti.ims.callcapability@1.0',
         'vendor.qti.imsrtpservice@3.0',
     ): lib_fixup_vendor_suffix,
@@ -66,13 +64,6 @@ blob_fixups: blob_fixups_user_type = {
         .add_needed('libcrypto_shim.so'),
     'vendor/lib64/camera/components/com.qti.node.mialgocontrol.so': blob_fixup()
         .add_needed('libpiex_shim.so'),
-    ('system_ext/lib/libwfdmmsrc_system.so','system_ext/lib64/libwfdmmsrc_system.so'): blob_fixup()
-        .add_needed('libgui_shim.so'),
-    'system_ext/lib64/libwfdnative.so': blob_fixup()
-        .replace_needed('android.hidl.base@1.0.so', 'libinput_shim.so')
-        .add_needed('libbinder_shim.so'),
-    ('system_ext/lib/libwfdservice.so','system_ext/lib64/libwfdservice.so'): blob_fixup()
-        .replace_needed('android.media.audio.common.types-V2-cpp.so', 'android.media.audio.common.types-V4-cpp.so'),
 }  # fmt: skip
 
 module = ExtractUtilsModule(
