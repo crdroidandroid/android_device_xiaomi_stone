@@ -206,6 +206,9 @@ on boot
     chown system system /sys/class/power_supply/battery/input_suspend
     chmod 0660 /sys/class/power_supply/battery/input_suspend
 
+    # Enable PowerHAL hint processing
+    setprop vendor.powerhal.init 1
+
 on property:vendor.display.lcd_density=560
    setprop dalvik.vm.heapgrowthlimit 256m
 
