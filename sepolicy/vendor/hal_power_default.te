@@ -1,18 +1,6 @@
-type vendor_sysfs_touchpanel, fs_type, sysfs_type;
+type vendor_sysfs_double_tap, sysfs_type, fs_type;
 
-allow hal_power_default {
-  vendor_sysfs_devfreq
-  vendor_sysfs_touchpanel
-}:dir search;
+allow hal_power_default vendor_sysfs_double_tap:dir search;
+allow hal_power_default vendor_sysfs_double_tap:file rw_file_perms;
 
-allow hal_power_default {
-  vendor_sysfs_devfreq
-  sysfs_devices_system_cpu
-  vendor_sysfs_graphics
-  vendor_sysfs_kgsl
-  vendor_sysfs_scsi_host
-  vendor_sysfs_touchpanel
-}:file rw_file_perms;
-
-vendor_internal_prop(vendor_power_prop)
-set_prop(hal_power_default, vendor_power_prop)
+allow hal_power_default sysfs:file { open read write };
