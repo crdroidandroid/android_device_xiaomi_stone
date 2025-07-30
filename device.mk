@@ -251,6 +251,8 @@ PRODUCT_PACKAGES += \
     vendor.xiaomi.hardware.mlipay@1.1.vendor \
     vendor.xiaomi.hardware.mtdservice@1.0.vendor
 
+$(call soong_config_set,stagefright,target_disable_thumbnail_block_model,true)
+
 # NFC
 PRODUCT_PACKAGES += \
     android.hardware.nfc-service.st
