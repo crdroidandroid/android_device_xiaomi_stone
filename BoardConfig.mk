@@ -65,6 +65,9 @@ DEVICE_MANIFEST_FILE := \
 DEVICE_MATRIX_FILE := \
     hardware/qcom-caf/common/compatibility_matrix.xml
 
+# HWUI
+HWUI_COMPILE_FOR_PERF := true
+
 # Kernel
 BOARD_KERNEL_BASE := 0x00000000
 BOARD_KERNEL_IMAGE_NAME := Image
