@@ -174,7 +174,6 @@ debug.hwui.skia_atrace_enabled=false
 config.disable_rtt=true
 
 #Bringup properties
-persist.sys.force_sw_gles=1
 persist.vendor.radio.atfwd.start=true
 ro.kernel.qemu.gles=0
 qemu.hw.mainkeys=0
