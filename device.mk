@@ -422,7 +422,7 @@ PRODUCT_PACKAGES += \
     libsensorndkbridge
 
 # Shipping API level
-PRODUCT_SHIPPING_API_LEVEL := 30
+PRODUCT_SHIPPING_API_LEVEL := 31
 
 # Soong
 PRODUCT_SOONG_NAMESPACES += \
