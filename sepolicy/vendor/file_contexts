@@ -40,10 +40,6 @@
 # Mlipay
 /(vendor|system/vendor)/bin/mlipayd@1.1                                        u:object_r:hal_mlipay_default_exec:s0
 
-# NFC
-/dev/st21nfc                                                                   u:object_r:nfc_device:s0
-/vendor/bin/hw/android\.hardware\.nfc-service\.st                              u:object_r:hal_nfc_default_exec:s0
-
 # Sensors
 /vendor/bin/hw/android\.hardware\.sensors-service\.xiaomi-multihal             u:object_r:hal_sensors_default_exec:s0
 
