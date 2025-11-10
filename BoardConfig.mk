@@ -94,23 +94,10 @@ BOARD_KERNEL_CMDLINE := \
     ip6table_raw.raw_before_defrag=1 \
     firmware_class.path=/vendor/firmware
 
-TARGET_KERNEL_CONFIG := holi_QGKI
-TARGET_KERNEL_SOURCE := $(DEVICE_PATH)-kernel/kernel-headers
+TARGET_KERNEL_CONFIG := moonstone_defconfig
+TARGET_KERNEL_SOURCE := kernel/xiaomi/sm6375
 TARGET_KERNEL_NO_GCC := true
 TARGET_KERNEL_VERSION := 5.4
-
-# Prebuilt Kernel
-TARGET_NO_KERNEL_OVERRIDE := true
-BOARD_KERNEL_BINARIES := kernel
-BOARD_PREBUILT_DTBOIMAGE := $(DEVICE_PATH)-kernel/dtbo.img
-BOARD_PREBUILT_DTBIMAGE_DIR := $(DEVICE_PATH)-kernel/dtb
-PRODUCT_COPY_FILES += \
-    $(DEVICE_PATH)-kernel/kernel:kernel
-
-# Kernel modules
-VENDOR_MODULES_PATH := $(DEVICE_PATH)-kernel/vendor-modules
-BOARD_VENDOR_KERNEL_MODULES := $(wildcard $(VENDOR_MODULES_PATH)/*.ko)
-BOARD_VENDOR_KERNEL_MODULES_LOAD := $(patsubst %,$(VENDOR_MODULES_PATH)/%,$(shell cat $(VENDOR_MODULES_PATH)/modules.load))
 
 # OTA assert
 TARGET_OTA_ASSERT_DEVICE := moonstone,sunstone,stone

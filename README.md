@@ -1,4 +1,4 @@
-# Device configuration for Redmi Note 12 5G
+# Device configuration for Redmi Note 12 5G & Poco X5 5G
 
 ```
 #
