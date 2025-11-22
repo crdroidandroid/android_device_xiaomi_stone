@@ -61,8 +61,6 @@ on init
     write /dev/cpuctl/background/cpu.rt_runtime_us 950000
     write /dev/cpuctl/top-app/cpu.rt_runtime_us 950000
     write /dev/cpuctl/rt/cpu.rt_runtime_us 950000
-    # wcnssr enable HQ-208869 wait for p2
-    # write /sys/bus/msm_subsys/devices/subsys2/restart_level related
 
     wait /dev/block/platform/soc/${ro.boot.bootdevice}
     symlink /dev/block/platform/soc/${ro.boot.bootdevice} /dev/block/bootdevice
@@ -118,13 +116,8 @@ on early-boot
      verity_update_state
     # M17-T code for HQ-267809 by dongshuai at 2022.12.8 end
 
-# add PcbaConfigSet by wanggang8
-service pcbaconfig /system/vendor/bin/PcbaConfigSet
-    class core
-    user root
-    group root system vendor_qti_diag
-    oneshot
-
+    # Enable WLAN cold boot calibration
+    write /sys/devices/platform/soc/b0000000.qcom,cnss-qca6490/fs_ready 1
 
 on boot
     chown system system /sys/class/drm/card0-DSI-1/doze_brightness
@@ -135,9 +128,7 @@ on boot
     chmod 0664 /sys/class/drm/card0-DSI-1/mipi_reg
     chown system system /sys/class/drm/card0-DSI-1/panel_info
     chmod 0444 /sys/class/drm/card0-DSI-1/panel_info
-    ##start Pcba
-    start pcbaconfig
-    chown root root /vendor/bin/PcbaConfigSet
+
     write /dev/cpuset/audio-app/cpus 1-2
     # Add a cpuset for the camera daemon
     # We want all cores for camera
@@ -261,15 +252,6 @@ on property:init.svc.vendor.per_mgr=running
 
 on property:sys.shutdown.requested=*
     stop vendor.per_proxy
-
-on property:vold.decrypt=trigger_restart_framework
-   start vendor.cnss_diag
-
-service vendor.cnss_diag /system/vendor/bin/cnss_diag -q -f -t HELIUM
-   class main
-   user system
-   group system wifi inet sdcard_rw media_rw diag
-   oneshot
 
 service mi_thermald /system/vendor/bin/mi_thermald
     class main
