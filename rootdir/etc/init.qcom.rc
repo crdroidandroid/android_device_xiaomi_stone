@@ -35,28 +35,11 @@ on early-init
     symlink /vendor/bt_firmware /bt_firmware
     symlink /vendor/dsp /dsp
 
-  # Change ownership of hw_recovery related nodes
-    chown system graphics /sys/kernel/debug/dri/0/debug/dump
-    chown system graphics /sys/kernel/debug/dri/0/debug/recovery_reg
-    chown system graphics /sys/kernel/debug/dri/0/debug/recovery_dbgbus
-    chown system graphics /sys/kernel/debug/dri/0/debug/recovery_vbif_dbgbus
-    chown system graphics /sys/kernel/debug/dri/0/debug/recovery_dsi_dbgbus
-
   # Change ownership of sysfs power control node
     chown system graphics /sys/class/drm/card0/device/power/control
 
-    # Change ownership of sw_sync node
-    chown system graphics /sys/kernel/debug/sync/sw_sync
-    chmod 0666 /sys/kernel/debug/sync/sw_sync
-
     #Disable UFS clock scaling
     write /sys/bus/platform/devices/1d84000.ufshc/clkscale_enable 0
-
-on init
-
-    # Support legacy paths
-    symlink /sdcard /mnt/sdcard
-    symlink /sdcard /storage/sdcard0
 
 on early-boot
     # set RLIMIT_MEMLOCK to 64MB
@@ -89,8 +72,6 @@ on boot
     chown bluetooth bluetooth /sys/module/hci_smd/parameters/hcismd_set
     chown system system /sys/module/msm_core/parameters/polling_interval
     chown system system /sys/module/msm_core/parameters/disabled
-    chown system system /sys/kernel/debug/msm_core/enable
-    chown system system /sys/kernel/debug/msm_core/ptable
     chown system system /sys/kernel/boot_slpi/ssr
     chown system system /sys/module/radio_iris_transport/parameters/fmsmd_set
     chmod 0660 /sys/module/bluetooth_power/parameters/power
@@ -211,10 +192,6 @@ on post-fs-data
     mkdir /data/vendor/tombstones 0771 system system
     mkdir /data/vendor/tombstones/rfs 0771 system system
 
-    mkdir /data/vendor/ramdump 0771 root system
-    mkdir /data/vendor/bluetooth 0770 bluetooth bluetooth
-    mkdir /data/vendor/ramdump/bluetooth 0770 bluetooth bluetooth
-
     # Create the directories used by the Wireless subsystem
     mkdir /data/vendor/wifi 0770 wifi wifi
     mkdir /data/vendor/wifi/sockets 0770 wifi wifi
@@ -222,8 +199,6 @@ on post-fs-data
     mkdir /data/vendor/wifi/hostapd/ctrl 0770 wifi wifi
     mkdir /data/vendor/wifi/wpa_supplicant 0770 wifi wifi
     mkdir /data/vendor/wifi/wpa 0770 wifi wifi
-    mkdir /data/vendor/wlan_logs 0770 root system
-    mkdir /sdcard/wlan_logs 0770 system system
     mkdir /data/vendor/wifi/wpa/sockets 0770 wifi wifi
 
     # Create the directories used by CnE subsystem
@@ -243,13 +218,6 @@ on post-fs-data
 
     # Create directory for modem_config
     mkdir /data/vendor/modem_config 0570 radio root
-
-    #HQ-314299, huangchaobing, 20231024, modify modem dump path begin
-    #Create the directories used for modem ramdump
-    mkdir /data/vendor/bsplog 0771 root system
-    mkdir /data/vendor/bsplog/modem 0771 root system
-    mkdir /data/vendor/bsplog/modem/ssr_dump 0771 root system
-    #HQ-314299, huangchaobing, 20231024, modify modem dump path end
 
     # Mounting of persist is moved to 'on emmc-fs' and 'on fs' sections
     # We chown/chmod /persist again so because mount is run as root + defaults
@@ -354,13 +322,6 @@ service vendor.ssr_setup /system/vendor/bin/ssr_setup
     oneshot
     disabled
 
-service vendor.ss_ramdump /vendor/bin/subsystem_ramdump 2
-    class main
-    user system
-    group root system media_rw bluetooth sdcard_rw everybody
-    ioprio rt 4
-    disabled
-
 on property:ro.vendor.iocgrp.config=1
     mkdir /dev/blkio
     mount cgroup none /dev/blkio blkio
@@ -375,10 +336,6 @@ on property:ro.vendor.iocgrp.config=1
 
 on property:persist.vendor.ssr.restart_level=*
     start vendor.ssr_setup
-
-on property:persist.vendor.ssr.enable_ramdumps=1
-    mkdir /data/vendor/ramdump_ssr 770 system system
-#   start vendor.ss_ramdump
 
 on property:sys.boot_completed=1
     #Enable UFS clock scaling back
@@ -480,49 +437,6 @@ service wifi_ftmd /system/vendor/bin/wifi_ftmd
 on property:vendor.wifi.ftmd.load=true
     insmod /system/lib/modules/pronto/pronto_wlan.ko con_mode=5
 
-#M17-T code for HQ-238410 add by zhangqiutong at 2022/12/21 start
-service vendor.tcpdump /vendor/bin/tcpdump -i wlan0 -W 2 -C 20 -w /data/vendor/wlan_logs/tcpdump.pcap
-    class main
-    user root
-    group root wifi
-    disabled
-service vendor.sniffer /vendor/bin/tcpdump -i any -W 2 -C 20 -w /data/vendor/wlan_logs/sniffer.pcap
-    class main
-    user root
-    group root
-    disabled
-    
-#M17-T code for HQ-277735 add by zhangqiutong at 2022/1/13 start
-on property:persist.vendor.wlan.tcpdump=true
-#M17-T code for HQ-277735 add by zhangqiutong at 2022/1/13 end
-    rm /data/vendor/wlan_logs/tcpdump.pcap0
-    rm /data/vendor/wlan_logs/sniffer.pcap0
-    start vendor.tcpdump
-    start vendor.sniffer
-#M17-T code for HQ-277735 add by zhangqiutong at 2022/1/13 start
-on property:persist.vendor.wlan.tcpdump=false
-#M17-T code for HQ-277735 add by zhangqiutong at 2022/1/13 end
-    stop vendor.tcpdump
-    stop vendor.sniffer
-    chown system system /data/vendor/wlan_logs/tcpdump.pcap0
-    chown system system /data/vendor/wlan_logs/sniffer.pcap0
-#M17-T code for HQ-238410 add by zhangqiutong at 2022/12/21 end
-
-#M17-T code for HQ-239016 add by baiyixin at 2022/11/4 start
-service vendor.startpktlog /vendor/bin/iwpriv wlan0 pktlog 2
-    class main
-    user root
-    group root
-    disabled
-    oneshot
-service vendor.stoppktlog /vendor/bin/iwpriv wlan0 pktlog 0
-    class main
-    user root
-    group root
-    disabled
-    oneshot
-#M17-T code for HQ-239016 add by baiyixin at 2022/11/4 end
-
 service cnss-daemon /system/vendor/bin/cnss-daemon -n -l
     class late_start
     user system
@@ -605,21 +519,6 @@ service profiler_daemon /system/bin/profiler_daemon
     user root
     group root
     disabled
-
-service vendor.ssr_diag /system/vendor/bin/ssr_diag
-    class late_start
-    user system
-    group system
-    disabled
-
-service qlogd /system/xbin/qlogd
-    socket qlogd stream 0662 system system
-    class main
-    disabled
-on property:persist.sys.qlogd=1
-    start qlogd
-on property:persist.sys.qlogd=0
-    stop qlogd
 
 service vm_bms /vendor/bin/vm_bms
     user root
