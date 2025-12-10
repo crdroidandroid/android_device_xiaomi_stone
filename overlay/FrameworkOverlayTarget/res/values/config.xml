@@ -641,5 +641,7 @@
     <!-- Whether WM DisplayContent supports high performance transitions
          (lower-end devices may want to disable) -->
     <bool name="config_deviceSupportsHighPerfTransitions">false</bool>
-
+    
+    <!-- Needed for custom rom CPU temp paths -->
+    <string name="config_cpu_temp_path">/sys/class/thermal/thermal_zone28/temp</string>
 </resources>

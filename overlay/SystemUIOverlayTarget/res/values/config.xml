@@ -42,4 +42,10 @@
     <!-- Whether to show a alarm dialog when device's usb port is overheating. -->
     <integer name="config_showUsbPortAlarm">1</integer>
 
+    <!-- Needed for custom rom CPU temp paths -->
+    <string name="config_cpuTempSensor">/sys/class/thermal/thermal_zone28/temp</string>
+
+    <!-- The CPU temperature divider, if needed -->
+    <integer name="config_cpuTempDivider">1000</integer>
+
 </resources>
