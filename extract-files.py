@@ -43,6 +43,13 @@ lib_fixups: lib_fixups_user_type = {
 }
 
 blob_fixups: blob_fixups_user_type = {
+    (
+        'vendor/lib64/libdpps.so',
+        'vendor/lib64/libpowercore.so',
+        'vendor/lib64/libsnapdragoncolor-manager.so',
+        'vendor/lib64/libvideooptfeature.so',
+    ): blob_fixup()
+        .replace_needed('libtinyxml2.so', 'libtinyxml2_1.so'),
     'vendor/bin/STFlashTool': blob_fixup()
          .add_needed('libbase_shim.so'),
     'vendor/etc/camera/camxoverridesettings.txt': blob_fixup()
