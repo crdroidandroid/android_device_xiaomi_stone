@@ -277,7 +277,8 @@ PRODUCT_PACKAGES += \
     LauncherOverlayTarget \
     SettingsOverlayTarget \
     SystemUIOverlayTarget \
-    WifiOverlayTarget
+    WifiOverlayTarget \
+    NfcOverlayTarget
 
 PRODUCT_PACKAGES += \
     FrameworkOverlayMoonstone \
@@ -391,7 +392,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     charger_fstab.qti \
     fstab.default
-  
+
 PRODUCT_PACKAGES += \
     init.class_main.sh \
     init.kernel.post_boot.sh \
