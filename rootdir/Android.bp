@@ -93,10 +93,3 @@ sh_binary {
     src: "bin/init.qti.kernel.sh",
     vendor: true,
 }
-
-sh_binary {
-    name: "vendor_modprobe.sh",
-    src: "bin/vendor_modprobe.sh",
-    vendor: true,
-}
-

@@ -401,8 +401,7 @@ PRODUCT_PACKAGES += \
     init.qcom.sh \
     init.qti.display_boot.sh \
     init.qti.early_init.sh \
-    init.qti.kernel.sh \
-    vendor_modprobe.sh
+    init.qti.kernel.sh
 
 PRODUCT_PACKAGES += \
     init.qcom.rc \
