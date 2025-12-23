@@ -29,6 +29,7 @@ void set_variant_props(const variant_info_t variant) {
     set_ro_build_prop("marketname", variant.model, true);
     set_ro_build_prop("model", variant.model, true);
     set_ro_build_prop("name", variant.sku_value, true);
+    property_override("ro.boot.hardware.sku", variant.sku_value);
     property_override("vendor.usb.product_string", variant.model, true);
 
     if (access("/system/bin/recovery", F_OK) != 0) {
