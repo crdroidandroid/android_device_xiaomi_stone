@@ -36,12 +36,6 @@
     <!-- If not zero, limits the internal screen recorder's framerate to the set value. -->
     <integer name="config_screenRecorderMaxFramerate">60</integer>
 
-    <!-- Whether to show a warning notification when device's skin temperature is high. -->
-    <integer name="config_showTemperatureWarning">1</integer>
-
-    <!-- Whether to show a alarm dialog when device's usb port is overheating. -->
-    <integer name="config_showUsbPortAlarm">1</integer>
-
     <!-- Needed for custom rom CPU temp paths -->
     <string name="config_cpuTempSensor">/sys/class/thermal/thermal_zone28/temp</string>
 
