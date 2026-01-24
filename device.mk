@@ -274,6 +274,7 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES += \
     FrameworkOverlayTarget \
+    LauncherOverlayTarget \
     SettingsOverlayTarget \
     SystemUIOverlayTarget \
     WifiOverlayTarget
