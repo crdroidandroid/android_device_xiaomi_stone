@@ -459,6 +459,18 @@
       "Value": "840000000"
     },
     {
+      "PowerHint": "EXPENSIVE_RENDERING",
+      "Node": "CPULittleClusterMinFreq",
+      "Duration": 0,
+      "Value": "1708800"
+    },
+    {
+      "PowerHint": "EXPENSIVE_RENDERING",
+      "Node": "CPUBigClusterMinFreq",
+      "Duration": 0,
+      "Value": "1651200"
+    },
+    {
       "PowerHint": "DISABLE_TA_BOOST",
       "Node": "UclampTAMin",
       "Duration": 0,
